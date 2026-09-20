@@ -1,6 +1,6 @@
 /**
- * JAYANT SHOUNDIK — PORTFOLIO CONTROLLER
- * Handles interactive modals, mobile navigation, copy clipboard, and animations
+ * JAYANT SHOUNDIK — STUDIO PORTFOLIO CONTROLLER
+ * Handles scroll reveal animations, dual-split interactive hover, modals, and clipboard copy
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -187,7 +187,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 2. Modal Controller
+  // 2. Scroll Reveal Observer
+  const revealItems = document.querySelectorAll('.reveal-item');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add('revealed'));
+  }
+
+  // 3. Interactive Hero Split Parallax / Tilt
+  const portraitCard = document.getElementById('portrait-card');
+  const heroLeft = document.querySelector('.hero-left-role');
+  const heroRight = document.querySelector('.hero-right-role');
+
+  if (portraitCard && heroLeft && heroRight) {
+    heroLeft.addEventListener('mouseenter', () => {
+      portraitCard.style.transform = 'translateY(-8px) rotate(-1.5deg) scale(1.02)';
+      portraitCard.style.boxShadow = '0 24px 48px -12px rgba(14, 165, 233, 0.2)';
+    });
+    heroLeft.addEventListener('mouseleave', () => {
+      portraitCard.style.transform = '';
+      portraitCard.style.boxShadow = '';
+    });
+
+    heroRight.addEventListener('mouseenter', () => {
+      portraitCard.style.transform = 'translateY(-8px) rotate(1.5deg) scale(1.02)';
+      portraitCard.style.boxShadow = '0 24px 48px -12px rgba(99, 102, 241, 0.2)';
+    });
+    heroRight.addEventListener('mouseleave', () => {
+      portraitCard.style.transform = '';
+      portraitCard.style.boxShadow = '';
+    });
+  }
+
+  // 4. Modal Controller
   const modalBackdrop = document.getElementById('project-modal');
   const modalContent = document.getElementById('modal-content');
   const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -210,23 +255,23 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <div class="modal-section-title">Key Engineering Highlights</div>
-      <ul class="feature-checklist">
+      <ul class="clean-checklist">
         ${data.highlights.map(h => `<li>${h}</li>`).join('')}
       </ul>
 
-      <div class="modal-section-title">Technologies & Tools</div>
-      <div class="tech-tags">
-        ${data.tech.map(t => `<span class="tag">${t}</span>`).join('')}
+      <div class="modal-section-title">Technologies &amp; Tools</div>
+      <div class="tag-row">
+        ${data.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
       </div>
 
       <div class="modal-action-row">
         ${data.github ? `
-          <a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-dark btn-sm">
             <span>Explore Repository on GitHub</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
           </a>
         ` : ''}
-        <button class="btn btn-secondary btn-sm" id="inner-close-btn">Close Inspector</button>
+        <button class="btn-studio btn-studio-outline btn-sm" id="inner-close-btn">Close Inspector</button>
       </div>
     `;
 
@@ -234,7 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBackdrop.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
-    // Hook inner close button
     const innerClose = document.getElementById('inner-close-btn');
     if (innerClose) {
       innerClose.addEventListener('click', closeModal);
@@ -247,7 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  // Open modal trigger buttons
   document.querySelectorAll('.open-modal-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -269,23 +312,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Mobile Navigation Toggle
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const navLinks = document.getElementById('nav-links');
+  // 5. Mobile Navigation
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const studioNav = document.getElementById('studio-nav');
 
-  if (mobileToggle && navLinks) {
+  if (mobileToggle && studioNav) {
     mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-open');
+      studioNav.classList.toggle('mobile-open');
     });
 
-    navLinks.querySelectorAll('a').forEach(link => {
+    studioNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile-open');
+        studioNav.classList.remove('mobile-open');
       });
     });
   }
 
-  // 4. Copy Email Action with Toast
+  // 6. Copy Email Action with Toast
   const copyEmailBtn = document.getElementById('copy-email-btn');
   const toast = document.getElementById('toast');
   const toastMsg = document.getElementById('toast-msg');
@@ -302,22 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
       navigator.clipboard.writeText('jshoundik06@gmail.com').then(() => {
-        showToast('Email copied to clipboard: jshoundik06@gmail.com');
+        showToast('Email copied: jshoundik06@gmail.com');
       }).catch(() => {
-        showToast('Failed to copy. Please email jshoundik06@gmail.com directly.');
+        showToast('Direct email: jshoundik06@gmail.com');
       });
     });
   }
-
-  // 5. Header backdrop on scroll
-  const siteHeader = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      siteHeader.style.background = 'rgba(7, 9, 14, 0.92)';
-      siteHeader.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.4)';
-    } else {
-      siteHeader.style.background = 'rgba(7, 9, 14, 0.78)';
-      siteHeader.style.boxShadow = 'none';
-    }
-  });
 });
