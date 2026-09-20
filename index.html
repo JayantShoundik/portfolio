@@ -3,412 +3,436 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JAYANT SHOUNDIK // FRONTEND &amp; AI ARCHITECT</title>
-  <meta name="description" content="Award-winning Stark-Tech inspired portfolio of Jayant Shoundik — Frontend Architect, Autonomous AI Engineer &amp; System Builder.">
+  <title>JayantShoundik® // Frontend &amp; AI Architect</title>
+  <meta name="description" content="Portfolio of Jayant Shoundik — Frontend Architect, Autonomous AI Engineer &amp; System Builder. Clean White &amp; Orange Mixed Editorial Design.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="stark-obsidian-theme">
+<body class="orange-white-theme">
 
-  <!-- Interactive Canvas Particle Field -->
-  <canvas id="ambient-canvas"></canvas>
-
-  <!-- Mouse Spotlight Illumination Overlay -->
-  <div class="cursor-spotlight" id="cursor-spotlight"></div>
-
-  <!-- STARK HUD NAVIGATION HEADER -->
-  <header class="hud-header" id="hud-header">
-    <div class="container header-container">
-      <a href="#hero" class="hud-brand">
-        <div class="arc-mini-core">
-          <div class="arc-ring-pulse"></div>
-          <div class="arc-center-dot"></div>
-        </div>
-        <div class="brand-titles">
-          <span class="brand-mark">JAYANT SHOUNDIK</span>
-          <span class="brand-sub">SYS // ARCHITECT_v2.6</span>
-        </div>
+  <!-- =========================================================================
+       SITE NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="studio-navbar" id="studio-header">
+    <div class="container nav-wrap">
+      <a href="#hero" class="brand-logotype">
+        <span class="brand-text">JayantShoundik<sup class="brand-reg">®</sup></span>
       </a>
 
-      <nav class="hud-nav" id="hud-nav">
-        <a href="#projects" class="hud-nav-link"><span class="nav-idx">01</span> CASE STUDIES</a>
-        <a href="#expertise" class="hud-nav-link"><span class="nav-idx">02</span> EXPERTISE MATRIX</a>
-        <a href="#terminal" class="hud-nav-link"><span class="nav-idx">03</span> STARK TERMINAL</a>
-        <a href="#experience" class="hud-nav-link"><span class="nav-idx">04</span> TIMELINE</a>
-        <a href="#contact" class="hud-nav-link"><span class="nav-idx">05</span> TRANSMIT</a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work <span class="nav-count">(06)</span></a>
+        <a href="#services" class="nav-link">Services <span class="nav-count">(04)</span></a>
+        <a href="#terminal" class="nav-link">Terminal</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <div class="header-status-group">
-        <div class="clock-ticker" id="utc-clock">UTC 00:00:00</div>
-        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="hud-icon-btn" title="GitHub System Profile">
+      <div class="nav-end-group">
+        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
         </a>
-        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="hud-icon-btn" title="LinkedIn Intelligence">
+        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="LinkedIn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
         </a>
-        <a href="#contact" class="btn-stark btn-stark-glow">INITIATE DISPATCH</a>
-        <button class="mobile-hud-toggle" id="mobile-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
+        <a href="#contact" class="btn-pill-orange">Get in Touch</a>
+        <button class="menu-hamburger" id="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION: STARK ARC-REACTOR & EDITORIAL ARCHITECT -->
-    <section class="stark-hero-section" id="hero">
-      <div class="container hero-container">
+    <!-- =========================================================================
+         HERO SECTION: THE ICONIC ORANGE EDITORIAL STAGE (EXACT REFERENCE DESIGN)
+         ========================================================================= -->
+    <section class="editorial-hero-wrapper" id="hero">
+      <div class="container hero-frame-container">
         
-        <!-- Left: Editorial Typography & Bio -->
-        <div class="hero-text-col">
-          <div class="status-hud-chip">
-            <span class="stark-amber-dot"></span>
-            <span class="status-hud-label">SYSTEM ONLINE // OPEN FOR ELITE AI &amp; SWE ROLES</span>
+        <!-- The Giant Signature Orange Canvas Box -->
+        <div class="orange-stage-box">
+          
+          <!-- Background Giant Watermark Name -->
+          <div class="stage-watermark-text" aria-hidden="true">JAYANT</div>
+
+          <!-- Architectural Reticle Crosshairs -->
+          <div class="crosshair-reticle reticle-tl">+</div>
+          <div class="crosshair-reticle reticle-tc">+</div>
+          <div class="crosshair-reticle reticle-tr">+</div>
+          <div class="crosshair-reticle reticle-bl">+</div>
+          <div class="crosshair-reticle reticle-br">+</div>
+
+          <!-- Top-Left Brand Sub-Tag -->
+          <div class="stage-sub-header">
+            <span class="stage-logo">JayantShoundik<sup>®</sup></span>
           </div>
 
-          <h1 class="hero-editorial-title">
-            <span class="title-line">JAYANT SHOUNDIK</span>
-            <span class="title-subline gradient-arc">FRONTEND &amp; AI ARCHITECT</span>
-          </h1>
-
-          <p class="hero-editorial-lead">
-            Principal builder engineering autonomous multi-agent pipelines, defense-grade geospatial analytics, and resilient distributed frontends. Designing high-throughput software where computational power meets high-end brand identity.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#projects" class="btn-stark btn-stark-primary">
-              <span>EXPLORE CASE STUDIES</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#terminal" class="btn-stark btn-stark-terminal">
-              <span class="term-sym">&gt;_</span>
-              <span>LAUNCH STARK HUD</span>
-            </a>
+          <!-- Left Statement Callout -->
+          <div class="stage-statement-callout">
+            <div class="statement-dash"></div>
+            <p class="statement-body">
+              I DESIGN &amp; ENGINEER HIGH-IMPACT AI SYSTEMS THAT ARE SIMPLE, SMART AND POWERFUL
+            </p>
           </div>
 
-          <div class="hud-meta-grid">
-            <div class="meta-tag-item">
-              <span class="meta-lbl">ACADEMIC CREDENTIAL</span>
-              <span class="meta-val">B.Tech Web Tech • CGPA 8.9 (CGU)</span>
+          <!-- Center Subject: Jayant Shoundik Portrait -->
+          <div class="stage-subject-wrap">
+            <img src="assets/jayant-hero-faded.png" alt="Jayant Shoundik — Frontend & AI Architect" class="stage-portrait-img">
+          </div>
+
+          <!-- Right Floating Card: Featured Project (Prism AI Engine) -->
+          <div class="floating-showcase-card">
+            <div class="showcase-thumb-box">
+              <div class="hardware-mockup-graphic">
+                <div class="hw-dial left-dial"></div>
+                <div class="hw-dial right-dial"></div>
+                <div class="hw-status-light"></div>
+              </div>
             </div>
-            <div class="meta-tag-item">
-              <span class="meta-lbl">VENTURE LEAD</span>
-              <span class="meta-val">InnoGrid Prism AI Monorepo</span>
-            </div>
-            <div class="meta-tag-item">
-              <span class="meta-lbl">DEFENSE HACKATHON</span>
-              <span class="meta-val">NTRO SIH-26143 Nautrace</span>
+            <div class="showcase-card-meta">
+              <span class="sc-brand">✱ INNOGRID PRISM</span>
+              <span class="sc-cat">/Autonomous AI</span>
             </div>
           </div>
+
+          <!-- Bottom-Left Massive Signature Typography -->
+          <div class="stage-bottom-signature">
+            <span class="stage-year-tag">©2026</span>
+            <h1 class="stage-name-heading">JAYANT</h1>
+          </div>
+
+          <!-- Bottom-Right Floating "Let's Talk" Capsule -->
+          <a href="#contact" class="floating-talk-badge">
+            <img src="assets/jayant-hero-cropped.jpg" alt="Jayant Shoundik" class="talk-avatar-img">
+            <div class="talk-text-group">
+              <span class="talk-kicker">Let's Talk</span>
+              <span class="talk-name">Jayant Shoundik</span>
+              <span class="talk-role">AI &amp; Frontend Architect</span>
+            </div>
+            <div class="talk-arrow-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 01: ABOUT & CORE METRICS (WHITE & ORANGE ACCENT)
+         ========================================================================= -->
+    <section class="content-section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-kicker-row">
+          <span class="orange-section-num">01 // IDENTITY &amp; EXPERTISE</span>
+          <span class="section-dot-divider"></span>
+          <span class="section-kicker-title">CORE PROFILE</span>
         </div>
 
-        <!-- Right: Arc-Reactor Portrait Frame -->
-        <div class="hero-visual-col">
-          <div class="arc-portrait-assembly">
-            
-            <!-- Holographic Rotating HUD Rings -->
-            <div class="arc-hologram-ring outer-ring"></div>
-            <div class="arc-hologram-ring middle-ring"></div>
-            <div class="arc-hologram-ring inner-ring"></div>
+        <div class="about-hero-grid">
+          <div class="about-left-col">
+            <h2 class="about-main-title">
+              Bridging <span class="orange-gradient-text">Frontier AI Reasoning</span> with High-End Web Craftsmanship.
+            </h2>
+            <p class="about-description">
+              Motivated 3rd-year Engineering student specializing in <strong>B.Tech in Web Technology (CGPA 8.9)</strong> at C.V. Raman Global University. Experienced as a startup core engineer at InnoGrid, software developer intern at Satpathy Solutions, and geospatial researcher for the Smart India Hackathon NTRO challenge.
+            </p>
+            <div class="about-actions-row">
+              <a href="#work" class="btn-pill-orange">View Featured Work (06)</a>
+              <a href="mailto:shoundikjayant@gmail.com" class="btn-pill-outline">Direct Contact</a>
+            </div>
+          </div>
 
-            <!-- Glowing Corner Reticles -->
-            <div class="corner-reticle top-left"></div>
-            <div class="corner-reticle top-right"></div>
-            <div class="corner-reticle bottom-left"></div>
-            <div class="corner-reticle bottom-right"></div>
-
-            <!-- Portrait Container -->
-            <div class="arc-portrait-frame" id="hero-portrait">
-              <img src="assets/jayant-executive.jpg" alt="Jayant Shoundik — Executive Portrait" class="executive-img">
-              <div class="scanline-overlay"></div>
-              <div class="hud-ambient-tint"></div>
+          <!-- Metric Cards Grid -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="mc-num orange-gradient-text">17+</span>
+              <span class="mc-label">Production Repositories</span>
+              <p class="mc-desc">Public &amp; private monorepo systems spanning React, Go, and FastAPI.</p>
             </div>
 
-            <!-- Floating Metric Chips -->
-            <div class="floating-hud-pill pill-top-right">
-              <span class="hud-pill-tag">CODEBASE</span>
-              <span class="hud-pill-data">17+ Active Repos</span>
+            <div class="metric-card">
+              <span class="mc-num orange-gradient-text">8.9</span>
+              <span class="mc-label">Academic CGPA</span>
+              <p class="mc-desc">Top percentile in Computer Science &amp; Web Technology Engineering.</p>
             </div>
 
-            <div class="floating-hud-pill pill-bottom-left">
-              <span class="hud-pill-tag">INTELLIGENCE</span>
-              <span class="hud-pill-data">Gemini 2.5 RAG // LangGraph</span>
+            <div class="metric-card">
+              <span class="mc-num orange-gradient-text">2x</span>
+              <span class="mc-label">National Accolades</span>
+              <p class="mc-desc">Winner CGU MUN (Highest Commendation) &amp; Tech Vision 2047 Winner.</p>
             </div>
 
-            <div class="floating-hud-pill pill-bottom-right">
-              <span class="hud-pill-tag">HONORS</span>
-              <span class="hud-pill-data">MUN Highest Commendation</span>
+            <div class="metric-card">
+              <span class="mc-num orange-gradient-text">NTRO</span>
+              <span class="mc-label">SIH-26143 Forensics</span>
+              <p class="mc-desc">Satellite Sentinel-1 SAR marine oil-spill attribution pipeline.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 01: PROJECT CASE STUDIES -->
-    <section class="stark-section" id="projects">
+    <!-- =========================================================================
+         SECTION 02: FEATURED WORK (06 CASE STUDIES)
+         ========================================================================= -->
+    <section class="content-section work-section" id="work">
       <div class="container">
-        <div class="editorial-header">
-          <div class="editorial-num">01 // CASE STUDIES</div>
-          <h2 class="editorial-title">PRODUCTION SYSTEMS &amp; <span class="gradient-arc">DEEP-TECH</span></h2>
-          <p class="editorial-desc">End-to-end architectures engineered for multi-modal marketing, defense forensics, legal intelligence, and high-frequency algorithms.</p>
+        
+        <div class="section-kicker-row">
+          <span class="orange-section-num">02 // PORTFOLIO CASE STUDIES</span>
+          <span class="section-dot-divider"></span>
+          <span class="section-kicker-title">SELECTED WORK (06)</span>
         </div>
 
-        <div class="case-studies-list">
+        <div class="section-headline-block">
+          <h2 class="section-big-title">Engineered For <span class="orange-gradient-text">Impact &amp; Scale</span>.</h2>
+          <p class="section-sub-copy">Production systems spanning autonomous marketing engines, legal AI assistants, research workspaces, and defense forensics.</p>
+        </div>
+
+        <div class="work-cards-grid">
           
-          <!-- Case Study 1: Vidhan AI / Legal AI -->
-          <article class="case-study-item">
-            <div class="case-num-col">01.1</div>
-            <div class="case-content-col">
-              <div class="case-tag-row">
-                <span class="hud-badge badge-cyan">LEGAL AI &amp; STATUTES</span>
-                <span class="hud-badge badge-violet">LANGCHAIN + CHROMADB</span>
-                <span class="hud-badge badge-amber">PRODUCTION READY</span>
-              </div>
-              <h3 class="case-heading">Vidhan AI &amp; Legal Assistant</h3>
-              <p class="case-summary">
-                An enterprise-grade autonomous legal synthesizer designed to ingest dense commercial contracts, statutory penal codes, and high-court rulings. Features domain-specific RAG embeddings to compute clause liability scores, surface risk exposure, and draft legally verifiable dispute motions.
-              </p>
-              
-              <div class="case-metrics-bar">
-                <div class="c-metric"><span class="val">&lt; 250ms</span><span class="lbl">Query Retrieval</span></div>
-                <div class="c-metric"><span class="val">100%</span><span class="lbl">Verifiable Statutory Citations</span></div>
-                <div class="c-metric"><span class="val">FastAPI</span><span class="lbl">Async Vector Ingestion</span></div>
-              </div>
-
-              <div class="case-actions">
-                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="legal-ai">
-                  <span>SYSTEM ARCHITECTURE SPECS</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-                <a href="https://github.com/JayantShoundik/legal-ai-assistant" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
-                  <span>GITHUB REPO</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-                </a>
-              </div>
+          <!-- Project 1: InnoGrid Prism -->
+          <div class="work-feature-card orange-glow-card">
+            <div class="wfc-header">
+              <span class="wfc-tag">STARTUP MONOREPO</span>
+              <span class="wfc-date">2026 ACTIVE</span>
             </div>
-          </article>
-
-          <!-- Case Study 2: Columbus / AI Research Agent -->
-          <article class="case-study-item">
-            <div class="case-num-col">01.2</div>
-            <div class="case-content-col">
-              <div class="case-tag-row">
-                <span class="hud-badge badge-violet">AUTONOMOUS MULTI-AGENT</span>
-                <span class="hud-badge badge-cyan">REACT 19 STREAMING</span>
-                <span class="hud-badge badge-green">FIBREBASE CLOUD</span>
-              </div>
-              <h3 class="case-heading">Columbus — Autonomous AI Research Agent</h3>
-              <p class="case-summary">
-                An intelligent autonomous research platform with token-by-token streaming markdown rendering, recursive thought decomposition, and web citation grounding. Enables researchers to orchestrate multi-agent investigation trees and export structured synthesis documents with zero latency.
-              </p>
-
-              <div class="case-metrics-bar">
-                <div class="c-metric"><span class="val">React 19</span><span class="lbl">Framer Motion Workspace</span></div>
-                <div class="c-metric"><span class="val">Multi-Agent</span><span class="lbl">Decomposition &amp; Grounding</span></div>
-                <div class="c-metric"><span class="val">SSE Stream</span><span class="lbl">Real-time Markdown Parsing</span></div>
-              </div>
-
-              <div class="case-actions">
-                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="research-frontend">
-                  <span>SYSTEM ARCHITECTURE SPECS</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-                <a href="https://github.com/JayantShoundik/frontend" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
-                  <span>GITHUB REPO</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-                </a>
-              </div>
+            <h3 class="wfc-title">Prism — Autonomous AI Marketing Engine</h3>
+            <p class="wfc-desc">
+              Autonomous marketing orchestration platform converting static customer catalogs into hyper-personalized visual cards, custom marketing copy, and synthetic voice notes dispatched via WhatsApp.
+            </p>
+            <div class="wfc-stack-row">
+              <span class="mini-tag">React 19</span>
+              <span class="mini-tag">Vite</span>
+              <span class="mini-tag">Spring Boot</span>
+              <span class="mini-tag">FastAPI</span>
+              <span class="mini-tag">Gemini 2.5</span>
+              <span class="mini-tag">Sarvam AI</span>
+              <span class="mini-tag">Twilio</span>
             </div>
-          </article>
-
-          <!-- Case Study 3: Innogrid MarketMind & Prism -->
-          <article class="case-study-item">
-            <div class="case-num-col">01.3</div>
-            <div class="case-content-col">
-              <div class="case-tag-row">
-                <span class="hud-badge badge-cyan">STARTUP MONOREPO</span>
-                <span class="hud-badge badge-amber">GEMINI 2.5 + TWILIO</span>
-                <span class="hud-badge badge-violet">SARVAM SPEECH</span>
-              </div>
-              <h3 class="case-heading">InnoGrid Prism // Autonomous Marketing Engine</h3>
-              <p class="case-summary">
-                Autonomous campaign orchestration platform transforming raw catalog data into hyper-personalized visual cards, custom marketing copy, and synthetic voice notes dispatched directly to VIP clientele through automated WhatsApp gateways. Microservices monorepo combining React, Spring Boot, and FastAPI.
-              </p>
-
-              <div class="case-metrics-bar">
-                <div class="c-metric"><span class="val">4 Nodes</span><span class="lbl">Microservices Mesh</span></div>
-                <div class="c-metric"><span class="val">Gemini 2.5</span><span class="lbl">Context Persona Matching</span></div>
-                <div class="c-metric"><span class="val">WhatsApp</span><span class="lbl">Zero-Touch VIP Dispatch</span></div>
-              </div>
-
-              <div class="case-actions">
-                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="prism">
-                  <span>SYSTEM ARCHITECTURE SPECS</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-                <a href="https://github.com/JayantShoundik/prism" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
-                  <span>GITHUB REPO</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-                </a>
-              </div>
+            <div class="wfc-actions">
+              <button class="btn-wfc-details open-modal-btn" data-project="prism">System Architecture Flow</button>
+              <a href="https://github.com/JayantShoundik/prism" target="_blank" rel="noopener noreferrer" class="btn-wfc-github">GitHub ↗</a>
             </div>
-          </article>
+          </div>
 
-          <!-- Case Study 4: Nautrace SIH-26143 NTRO -->
-          <article class="case-study-item">
-            <div class="case-num-col">01.4</div>
-            <div class="case-content-col">
-              <div class="case-tag-row">
-                <span class="hud-badge badge-red">DEFENSE GEOSPATIAL // NTRO</span>
-                <span class="hud-badge badge-cyan">SENTINEL-1 SAR</span>
-                <span class="hud-badge badge-violet">OPENDRIFT FORENSICS</span>
-              </div>
-              <h3 class="case-heading">Nautrace — Satellite Oil-Spill Attribution</h3>
-              <p class="case-summary">
-                National Technical Research Organisation (NTRO) challenge. End-to-end maritime forensic pipeline detecting dual-pol SAR slicks with SegFormer, executing hydrodynamic Lagrangian reverse-drift modeling (Copernicus Marine SMOC + ECMWF), and calculating space-time probabilistic AIS ship attribution.
-              </p>
-
-              <div class="case-metrics-bar">
-                <div class="c-metric"><span class="val">SAR GRD</span><span class="lbl">Sentinel-1 Dual-Pol</span></div>
-                <div class="c-metric"><span class="val">SMOC Drift</span><span class="lbl">Stokes &amp; Tides Current Physics</span></div>
-                <div class="c-metric"><span class="val">AIS Forensic</span><span class="lbl">Candidate Vessel Attribution</span></div>
-              </div>
-
-              <div class="case-actions">
-                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="nautrace">
-                  <span>SYSTEM ARCHITECTURE SPECS</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
+          <!-- Project 2: Vidhan AI -->
+          <div class="work-feature-card">
+            <div class="wfc-header">
+              <span class="wfc-tag">LEGAL AI &amp; STATUTES</span>
+              <span class="wfc-date">2026 ACTIVE</span>
             </div>
-          </article>
-
-          <!-- Case Study 5: Squarieean & Stock Analytics -->
-          <article class="case-study-item">
-            <div class="case-num-col">01.5</div>
-            <div class="case-content-col">
-              <div class="case-tag-row">
-                <span class="hud-badge badge-amber">QUANTITATIVE ALGORITHMS</span>
-                <span class="hud-badge badge-cyan">NSE EQUITIES</span>
-                <span class="hud-badge badge-violet">TABLEAU ANALYTICS</span>
-              </div>
-              <h3 class="case-heading">Squarieean &amp; Stock Analytics Suite</h3>
-              <p class="case-summary">
-                Quantitative market intelligence pipeline ingesting National Stock Exchange (NSE) equity data, generating automated momentum features (SMA, EMA, RSI, volume breakout thresholds), training ML regression price forecasters, and rendering comparative BI dashboards.
-              </p>
-
-              <div class="case-metrics-bar">
-                <div class="c-metric"><span class="val">Python</span><span class="lbl">Pandas / NumPy Pipelines</span></div>
-                <div class="c-metric"><span class="val">ML Models</span><span class="lbl">Scikit Trend Regression</span></div>
-                <div class="c-metric"><span class="val">Tableau</span><span class="lbl">Interactive NIFTY 50 Benchmarks</span></div>
-              </div>
-
-              <div class="case-actions">
-                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="stock-analytics">
-                  <span>SYSTEM ARCHITECTURE SPECS</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-                <a href="https://github.com/JayantShoundik/stock_analytics_dashboard" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
-                  <span>GITHUB REPO</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-                </a>
-              </div>
+            <h3 class="wfc-title">Vidhan AI &amp; Legal Assistant</h3>
+            <p class="wfc-desc">
+              Autonomous statutory contract query assistant ingesting commercial agreements, penal codes, and court precedents to compute clause liability scores and synthesize verified legal dispute drafts.
+            </p>
+            <div class="wfc-stack-row">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">LangChain</span>
+              <span class="mini-tag">ChromaDB</span>
+              <span class="mini-tag">FastAPI</span>
+              <span class="mini-tag">Transformers</span>
             </div>
-          </article>
+            <div class="wfc-actions">
+              <button class="btn-wfc-details open-modal-btn" data-project="legal-ai">System Architecture Flow</button>
+              <a href="https://github.com/JayantShoundik/legal-ai-assistant" target="_blank" rel="noopener noreferrer" class="btn-wfc-github">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- Project 3: Columbus AI Research Agent -->
+          <div class="work-feature-card">
+            <div class="wfc-header">
+              <span class="wfc-tag">AUTONOMOUS MULTI-AGENT</span>
+              <span class="wfc-date">2026 ACTIVE</span>
+            </div>
+            <h3 class="wfc-title">Columbus — Autonomous AI Research Agent</h3>
+            <p class="wfc-desc">
+              Interactive research platform with token-by-token streaming markdown rendering, multi-step thought decomposition, and web grounding citations built for dense scholarly investigation.
+            </p>
+            <div class="wfc-stack-row">
+              <span class="mini-tag">React 19</span>
+              <span class="mini-tag">TypeScript</span>
+              <span class="mini-tag">Framer Motion</span>
+              <span class="mini-tag">Firebase</span>
+              <span class="mini-tag">Python</span>
+            </div>
+            <div class="wfc-actions">
+              <button class="btn-wfc-details open-modal-btn" data-project="research-frontend">System Architecture Flow</button>
+              <a href="https://github.com/JayantShoundik/frontend" target="_blank" rel="noopener noreferrer" class="btn-wfc-github">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- Project 4: Nautrace SIH-26143 NTRO -->
+          <div class="work-feature-card">
+            <div class="wfc-header">
+              <span class="wfc-tag">DEFENSE GEOSPATIAL AI</span>
+              <span class="wfc-date">NTRO HACKATHON</span>
+            </div>
+            <h3 class="wfc-title">Nautrace — Satellite Oil-Spill Attribution</h3>
+            <p class="wfc-desc">
+              Maritime forensic pipeline detecting Sentinel-1 SAR dual-pol slicks with SegFormer, running hydrodynamic Lagrangian reverse-drift modeling (Copernicus SMOC), and calculating probabilistic AIS ship attribution.
+            </p>
+            <div class="wfc-stack-row">
+              <span class="mini-tag">Sentinel-1 SAR</span>
+              <span class="mini-tag">SegFormer</span>
+              <span class="mini-tag">OpenDrift</span>
+              <span class="mini-tag">Copernicus SMOC</span>
+              <span class="mini-tag">AIS Trajectories</span>
+            </div>
+            <div class="wfc-actions">
+              <button class="btn-wfc-details open-modal-btn" data-project="nautrace">System Architecture Flow</button>
+            </div>
+          </div>
+
+          <!-- Project 5: BimaNyaya -->
+          <div class="work-feature-card">
+            <div class="wfc-header">
+              <span class="wfc-tag">INSURTECH AI</span>
+              <span class="wfc-date">2026 ACTIVE</span>
+            </div>
+            <h3 class="wfc-title">BimaNyaya (बीमान्याय)</h3>
+            <p class="wfc-desc">
+              AI insurance dispute platform protecting policyholders against arbitrary claim rejections and proportionate room rent deductions using OCR and RAG over IRDAI master circulars.
+            </p>
+            <div class="wfc-stack-row">
+              <span class="mini-tag">TanStack Start</span>
+              <span class="mini-tag">React 19</span>
+              <span class="mini-tag">FastAPI</span>
+              <span class="mini-tag">Go</span>
+              <span class="mini-tag">Convex DB</span>
+            </div>
+            <div class="wfc-actions">
+              <button class="btn-wfc-details open-modal-btn" data-project="bimanyaya">System Architecture Flow</button>
+              <a href="https://github.com/JayantShoundik/BimaNyaya" target="_blank" rel="noopener noreferrer" class="btn-wfc-github">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- Project 6: Squarieean & Stock Analytics -->
+          <div class="work-feature-card">
+            <div class="wfc-header">
+              <span class="wfc-tag">QUANTITATIVE FINANCE</span>
+              <span class="wfc-date">2026 ACTIVE</span>
+            </div>
+            <h3 class="wfc-title">Squarieean &amp; Stock Analytics Suite</h3>
+            <p class="wfc-desc">
+              Quantitative financial intelligence pipeline ingesting NSE equity ticks, engineering momentum indicators (SMA, EMA, RSI), training ML trend regression models, and rendering interactive Tableau dashboards.
+            </p>
+            <div class="wfc-stack-row">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">Pandas</span>
+              <span class="mini-tag">Scikit-Learn</span>
+              <span class="mini-tag">Tableau</span>
+              <span class="mini-tag">Flask</span>
+            </div>
+            <div class="wfc-actions">
+              <button class="btn-wfc-details open-modal-btn" data-project="stock-analytics">System Architecture Flow</button>
+              <a href="https://github.com/JayantShoundik/stock_analytics_dashboard" target="_blank" rel="noopener noreferrer" class="btn-wfc-github">GitHub ↗</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 02: EXPERTISE MATRIX (INTERACTIVE VISUAL NODES) -->
-    <section class="stark-section" id="expertise">
+    <!-- =========================================================================
+         SECTION 03: SERVICES & EXPERTISE MATRIX (04 CATEGORIES)
+         ========================================================================= -->
+    <section class="content-section services-section" id="services">
       <div class="container">
-        <div class="editorial-header">
-          <div class="editorial-num">02 // SYSTEM CAPABILITIES</div>
-          <h2 class="editorial-title">EXPERTISE <span class="gradient-arc">MATRIX</span></h2>
-          <p class="editorial-desc">Click any technical node to initialize the HUD inspector for real-time architectural insights, role implementations, and syntax benchmarks.</p>
+        
+        <div class="section-kicker-row">
+          <span class="orange-section-num">03 // CAPABILITIES</span>
+          <span class="section-dot-divider"></span>
+          <span class="section-kicker-title">SERVICES &amp; STACK (04)</span>
         </div>
 
-        <div class="expertise-quad-grid">
+        <div class="section-headline-block">
+          <h2 class="section-big-title">Technical <span class="orange-gradient-text">Proficiency Matrix</span>.</h2>
+          <p class="section-sub-copy">Click any node to inspect code snippets and implementation architectural roles.</p>
+        </div>
+
+        <div class="services-quad-grid">
           
-          <!-- Category 1: Frontend Architecture -->
-          <div class="hud-category-panel">
-            <div class="panel-header">
-              <span class="cat-code">[SYS_01]</span>
-              <h3>FRONTEND ARCHITECTURE</h3>
+          <!-- Category 1 -->
+          <div class="service-box">
+            <div class="sb-header">
+              <span class="sb-code">SYS.01</span>
+              <h3 class="sb-title">Frontend Architecture</h3>
             </div>
-            <div class="interactive-nodes-container">
-              <button class="tech-node active-node" data-node="react">React 19</button>
-              <button class="tech-node" data-node="nextjs">Next.js</button>
-              <button class="tech-node" data-node="tailwind">Tailwind CSS</button>
-              <button class="tech-node" data-node="canvas">HTML5 Canvas</button>
-              <button class="tech-node" data-node="framermotion">Framer Motion</button>
-              <button class="tech-node" data-node="typescript">TypeScript</button>
-            </div>
-          </div>
-
-          <!-- Category 2: AI & LangGraph -->
-          <div class="hud-category-panel">
-            <div class="panel-header">
-              <span class="cat-code">[SYS_02]</span>
-              <h3>AI, LANGGRAPH &amp; RAG</h3>
-            </div>
-            <div class="interactive-nodes-container">
-              <button class="tech-node" data-node="gemini">Google Gemini 2.5</button>
-              <button class="tech-node" data-node="langgraph">LangGraph Agents</button>
-              <button class="tech-node" data-node="rag">Statute / Legal RAG</button>
-              <button class="tech-node" data-node="chromadb">ChromaDB Vector</button>
-              <button class="tech-node" data-node="pytorch">PyTorch / Scikit</button>
-              <button class="tech-node" data-node="sarvam">Sarvam AI Speech</button>
+            <div class="sb-nodes">
+              <button class="skill-node active-skill" data-node="react">React 19</button>
+              <button class="skill-node" data-node="nextjs">Next.js</button>
+              <button class="skill-node" data-node="tailwind">Tailwind CSS</button>
+              <button class="skill-node" data-node="canvas">HTML5 Canvas</button>
+              <button class="skill-node" data-node="framermotion">Framer Motion</button>
+              <button class="skill-node" data-node="typescript">TypeScript</button>
             </div>
           </div>
 
-          <!-- Category 3: Java & Enterprise Backend -->
-          <div class="hud-category-panel">
-            <div class="panel-header">
-              <span class="cat-code">[SYS_03]</span>
-              <h3>JAVA &amp; ENTERPRISE BACKEND</h3>
+          <!-- Category 2 -->
+          <div class="service-box">
+            <div class="sb-header">
+              <span class="sb-code">SYS.02</span>
+              <h3 class="sb-title">AI &amp; LangGraph</h3>
             </div>
-            <div class="interactive-nodes-container">
-              <button class="tech-node" data-node="springboot">Spring Boot 3</button>
-              <button class="tech-node" data-node="fastapi">FastAPI (Python)</button>
-              <button class="tech-node" data-node="hibernate">Hibernate / JPA</button>
-              <button class="tech-node" data-node="mysql">MySQL (Normalized)</button>
-              <button class="tech-node" data-node="microservices">Microservices Mesh</button>
-              <button class="tech-node" data-node="rbac">Enterprise RBAC</button>
+            <div class="sb-nodes">
+              <button class="skill-node" data-node="gemini">Gemini 2.5 API</button>
+              <button class="skill-node" data-node="langgraph">LangGraph Agents</button>
+              <button class="skill-node" data-node="rag">Legal / Statute RAG</button>
+              <button class="skill-node" data-node="chromadb">ChromaDB Vector</button>
+              <button class="skill-node" data-node="pytorch">PyTorch / Scikit</button>
+              <button class="skill-node" data-node="sarvam">Sarvam AI Audio</button>
             </div>
           </div>
 
-          <!-- Category 4: DevOps & Cloud -->
-          <div class="hud-category-panel">
-            <div class="panel-header">
-              <span class="cat-code">[SYS_04]</span>
-              <h3>DEVOPS &amp; CLOUD PLATFORMS</h3>
+          <!-- Category 3 -->
+          <div class="service-box">
+            <div class="sb-header">
+              <span class="sb-code">SYS.03</span>
+              <h3 class="sb-title">Java &amp; Enterprise Backend</h3>
             </div>
-            <div class="interactive-nodes-container">
-              <button class="tech-node" data-node="docker">Docker Containers</button>
-              <button class="tech-node" data-node="githubactions">GitHub Actions CI</button>
-              <button class="tech-node" data-node="firebase">Firebase Auth</button>
-              <button class="tech-node" data-node="tableau">Tableau BI</button>
-              <button class="tech-node" data-node="twilio">Twilio Messaging</button>
-              <button class="tech-node" data-node="linux">Linux / POSIX Shell</button>
+            <div class="sb-nodes">
+              <button class="skill-node" data-node="springboot">Spring Boot 3</button>
+              <button class="skill-node" data-node="fastapi">FastAPI (Python)</button>
+              <button class="skill-node" data-node="hibernate">Hibernate / JPA</button>
+              <button class="skill-node" data-node="mysql">MySQL Normalized</button>
+              <button class="skill-node" data-node="microservices">Microservices Mesh</button>
+              <button class="skill-node" data-node="rbac">Enterprise RBAC</button>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="service-box">
+            <div class="sb-header">
+              <span class="sb-code">SYS.04</span>
+              <h3 class="sb-title">Cloud &amp; DevOps</h3>
+            </div>
+            <div class="sb-nodes">
+              <button class="skill-node" data-node="docker">Docker Containers</button>
+              <button class="skill-node" data-node="githubactions">GitHub Actions</button>
+              <button class="skill-node" data-node="firebase">Firebase Cloud</button>
+              <button class="skill-node" data-node="tableau">Tableau BI</button>
+              <button class="skill-node" data-node="twilio">Twilio WhatsApp</button>
+              <button class="skill-node" data-node="linux">Linux / POSIX Shell</button>
             </div>
           </div>
         </div>
 
-        <!-- Dynamic HUD Node Inspector Output -->
-        <div class="node-inspector-box" id="node-inspector">
-          <div class="inspector-header">
-            <div class="insp-tag-badge" id="insp-badge">ACTIVE NODE // REACT 19</div>
-            <span class="insp-title" id="insp-name">React 19 &amp; Concurrent Architecture</span>
-            <div class="insp-status">● OPTIMIZED PRODUCTION</div>
+        <!-- Dynamic Live Inspector Output -->
+        <div class="live-inspector-card" id="inspector-card">
+          <div class="lic-top">
+            <span class="lic-tag" id="lic-tag">ACTIVE NODE // REACT 19</span>
+            <span class="lic-name" id="lic-name">React 19 &amp; Concurrent Architecture</span>
+            <span class="lic-status">● OPTIMIZED PRODUCTION</span>
           </div>
-          <p class="insp-desc" id="insp-desc">
+          <p class="lic-desc" id="lic-desc">
             Implemented in Columbus and InnoGrid Prism for asynchronous token streaming, dynamic UI rendering, and sub-millisecond DOM transitions without hydration overhead.
           </p>
-          <div class="insp-code-block">
-            <pre><code id="insp-code">// React 19 Concurrent Dispatch Pattern
+          <div class="lic-code-box">
+            <pre><code id="lic-code">// React 19 Concurrent Dispatch Pattern
 const streamTask = useTransition(async () => {
   const stream = await orchestrateAgentPipeline({ input, mode: 'DEEP_RESEARCH' });
   for await (const chunk of stream) {
@@ -420,164 +444,154 @@ const streamTask = useTransition(async () => {
       </div>
     </section>
 
-    <!-- SECTION 03: STARK HUD COMMAND TERMINAL -->
-    <section class="stark-section" id="terminal">
+    <!-- =========================================================================
+         SECTION 04: EXPERIENCE & HONORS TIMELINE
+         ========================================================================= -->
+    <section class="content-section timeline-section" id="timeline">
       <div class="container">
-        <div class="editorial-header">
-          <div class="editorial-num">03 // STARK INTERFACE</div>
-          <h2 class="editorial-title">STARK HUD <span class="gradient-arc">TERMINAL</span></h2>
-          <p class="editorial-desc">Run direct queries against the Jayant Shoundik knowledge graph. Type <code class="inline-code">help</code> to inspect all system directives.</p>
+        
+        <div class="section-kicker-row">
+          <span class="orange-section-num">04 // TRACK RECORD</span>
+          <span class="section-dot-divider"></span>
+          <span class="section-kicker-title">EXPERIENCE &amp; HONORS</span>
         </div>
 
-        <div class="stark-cli-terminal">
-          <div class="cli-top-bar">
-            <div class="cli-buttons">
-              <span class="cli-btn c-red"></span>
-              <span class="cli-btn c-amber"></span>
-              <span class="cli-btn c-green"></span>
+        <div class="experience-orange-grid">
+          
+          <div class="exp-card">
+            <span class="exp-period-badge">2026 // PRESENT</span>
+            <h3 class="exp-card-title">Software Developer Intern</h3>
+            <span class="exp-card-org">Satpathy Solutions • Bhubaneswar, India</span>
+            <p class="exp-card-text">
+              Engaged in the development, integration testing, and deployment phases of core enterprise modules. Maintaining DPDP Act 2023 compliance across production systems in agile sprints.
+            </p>
+          </div>
+
+          <div class="exp-card">
+            <span class="exp-period-badge">ACTIVE VENTURE</span>
+            <h3 class="exp-card-title">Core Founding Engineer &amp; AI Lead</h3>
+            <span class="exp-card-org">InnoGrid (Prism &amp; MarketMind)</span>
+            <p class="exp-card-text">
+              Spearheading frontend and AI pipeline architecture. Engineered multi-modal campaign generation with Google Gemini 2.5, Sarvam AI voice synthesis, and Twilio WhatsApp delivery.
+            </p>
+          </div>
+
+          <div class="exp-card">
+            <span class="exp-period-badge">FIRST PLACE // GOLD</span>
+            <h3 class="exp-card-title">Winner – CGU Model United Nations (MUN)</h3>
+            <span class="exp-card-org">Highest Commendation Award</span>
+            <p class="exp-card-text">
+              Awarded for exceptional diplomacy, structured argumentation, policy-driven debate, resolution drafting, and committee leadership across simulated geopolitical councils.
+            </p>
+          </div>
+
+          <div class="exp-card">
+            <span class="exp-period-badge">FIRST PLACE // WINNER</span>
+            <h3 class="exp-card-title">Winner – Tech Vision 2047 Competition</h3>
+            <span class="exp-card-org">India’s Tech Vision 2047 Roadmap</span>
+            <p class="exp-card-text">
+              Recognized for presenting a comprehensive technology roadmap showcasing AI-driven automation, sovereign digital infrastructure, and scalable computational pipelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 05: INTERACTIVE CLI TERMINAL
+         ========================================================================= -->
+    <section class="content-section terminal-section" id="terminal">
+      <div class="container">
+        
+        <div class="section-kicker-row">
+          <span class="orange-section-num">05 // COMMAND LINE</span>
+          <span class="section-dot-divider"></span>
+          <span class="section-kicker-title">INTERACTIVE TERMINAL</span>
+        </div>
+
+        <div class="section-headline-block">
+          <h2 class="section-big-title">Stark-Tech <span class="orange-gradient-text">Interactive Shell</span>.</h2>
+          <p class="section-sub-copy">Type <code class="orange-code">help</code> to inspect all directives. Try <code class="orange-code">projects</code>, <code class="orange-code">skills</code>, <code class="orange-code">contact</code>, or <code class="orange-code">whoami</code>.</p>
+        </div>
+
+        <div class="orange-cli-shell">
+          <div class="shell-header">
+            <div class="shell-dots">
+              <span class="s-dot dot-red"></span>
+              <span class="s-dot dot-yellow"></span>
+              <span class="s-dot dot-green"></span>
             </div>
-            <span class="cli-title">stark-hud@jayantshoundik:~ (bash)</span>
-            <span class="cli-active-tag">SYS_STATUS: 100% OPERATIONAL</span>
+            <span class="shell-title">jayant@portfolio:~$ (zsh)</span>
+            <span class="shell-live-pill">● SYSTEM READY</span>
           </div>
 
-          <div class="cli-output" id="cli-output">
-            <div class="cli-line banner-line">========================================================================</div>
-            <div class="cli-line banner-line">⚡ STARK-TECH OPERATIONAL TERMINAL // JAYANT SHOUNDIK v2.6</div>
-            <div class="cli-line banner-line">Type 'help' for available directives. Try 'projects', 'skills', 'contact', 'arc'.</div>
-            <div class="cli-line banner-line">========================================================================</div>
+          <div class="shell-output-zone" id="shell-output">
+            <div class="shell-line orange-accent-line">⚡ JAYANT SHOUNDIK // FRONTEND &amp; AI ARCHITECT CLI v2.6</div>
+            <div class="shell-line">Type 'help' for commands. Try 'projects', 'skills', 'contact', 'whoami', 'clear'.</div>
           </div>
 
-          <form class="cli-input-form" id="cli-form">
-            <span class="cli-prompt">stark://jayant&gt;</span>
-            <input type="text" class="cli-input" id="cli-input" placeholder="Type a command (e.g. help, projects, skills, contact)..." autocomplete="off" spellcheck="false">
+          <form class="shell-input-row" id="shell-form">
+            <span class="shell-prompt">jayant@studio:~$</span>
+            <input type="text" class="shell-input-field" id="shell-input" placeholder="Type a command (e.g. help, projects, skills)..." autocomplete="off" spellcheck="false">
           </form>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 04: PROFESSIONAL TIMELINE & ACCREDITATIONS -->
-    <section class="stark-section" id="experience">
+    <!-- =========================================================================
+         SECTION 06: LET'S TALK / ORANGE CONTACT SHOWCASE
+         ========================================================================= -->
+    <section class="content-section contact-section" id="contact">
       <div class="container">
-        <div class="editorial-header">
-          <div class="editorial-num">04 // TRACK RECORD</div>
-          <h2 class="editorial-title">TIMELINE &amp; <span class="gradient-arc">ACCREDITATIONS</span></h2>
-          <p class="editorial-desc">Engineering leadership, corporate internships, and diplomatic debate accolades.</p>
-        </div>
-
-        <div class="timeline-hud-container">
-          
-          <!-- Timeline 1: Satpathy Solutions -->
-          <div class="timeline-hud-card">
-            <div class="t-date-chip">PRESENT // 2026</div>
-            <div class="t-body">
-              <span class="t-role">SOFTWARE DEVELOPER INTERN</span>
-              <span class="t-org">Satpathy Solutions • Bhubaneswar, India</span>
-              <p class="t-text">
-                Developing core enterprise modules, executing end-to-end integration tests, and maintaining DPDP Act 2023 compliance across client-facing production systems in collaborative agile sprints.
+        
+        <!-- Large Orange Contact Hero Card -->
+        <div class="orange-contact-stage">
+          <div class="contact-inner-grid">
+            <div class="contact-left-details">
+              <span class="contact-pill-tag">DIRECT INQUIRY</span>
+              <h2 class="contact-hero-title">Let’s Build Something <span class="white-highlight">Impactful</span>.</h2>
+              <p class="contact-hero-lead">
+                Open to high-velocity software engineering roles, founding AI opportunities, and technical consulting.
               </p>
-            </div>
-          </div>
 
-          <!-- Timeline 2: InnoGrid -->
-          <div class="timeline-hud-card">
-            <div class="t-date-chip">ACTIVE VENTURE</div>
-            <div class="t-body">
-              <span class="t-role">CORE FOUNDING ENGINEER &amp; AI LEAD</span>
-              <span class="t-org">InnoGrid (Prism &amp; MarketMind)</span>
-              <p class="t-text">
-                Spearheading frontend and AI pipeline architecture. Engineered multi-modal campaign generation with Google Gemini 2.5, Sarvam AI voice synthesis, and Twilio WhatsApp dispatch.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline 3: MUN Highest Commendation -->
-          <div class="timeline-hud-card">
-            <div class="t-date-chip">ACCOLADE // FIRST PLACE</div>
-            <div class="t-body">
-              <span class="t-role">WINNER — CGU MODEL UNITED NATIONS (MUN)</span>
-              <span class="t-org">Highest Commendation Award</span>
-              <p class="t-text">
-                Awarded for exceptional diplomacy, structured argumentation, policy-driven debate, resolution drafting, and committee leadership across simulated geopolitical councils.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline 4: Tech Vision 2047 Winner -->
-          <div class="timeline-hud-card">
-            <div class="t-date-chip">ACCOLADE // FIRST PLACE</div>
-            <div class="t-body">
-              <span class="t-role">WINNER — TECH VISION 2047 COMPETITION</span>
-              <span class="t-org">National Technological Roadmap</span>
-              <p class="t-text">
-                Formulated a strategic roadmap detailing AI-driven automation, sovereign digital systems, and computational scalability shaping India's tech landscape by 2047.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 05: SECURE DISPATCH & TRANSMIT -->
-    <section class="stark-section" id="contact">
-      <div class="container">
-        <div class="editorial-header">
-          <div class="editorial-num">05 // SECURE DISPATCH</div>
-          <h2 class="editorial-title">TRANSMIT <span class="gradient-arc">COMMUNICATION</span></h2>
-          <p class="editorial-desc">Open channel for high-priority software engineering roles, founding AI partnerships, and technical inquiries.</p>
-        </div>
-
-        <div class="stark-contact-hud">
-          <div class="contact-terminal-info">
-            <div class="hud-status-row">
-              <span class="stark-amber-dot"></span>
-              <span class="c-tag">DIRECT TRANSMISSION CHANNEL</span>
-            </div>
-            <h3 class="c-title">Let’s Build Frontier Systems Together.</h3>
-            <p class="c-desc">
-              Looking for a high-velocity engineer who bridges deep-tech AI reasoning with pristine frontend polish? Reach out directly via encrypted channels below.
-            </p>
-
-            <div class="comm-vector-list">
-              <div class="comm-item">
-                <span class="comm-lbl">EMAIL:</span>
-                <a href="mailto:shoundikjayant@gmail.com" class="comm-val">shoundikjayant@gmail.com</a>
-                <button class="btn-copy-chip" id="copy-email-btn" title="Copy email address">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>COPY</span>
-                </button>
-              </div>
-              <div class="comm-item">
-                <span class="comm-lbl">PHONE:</span>
-                <a href="tel:+917070203434" class="comm-val">+91 7070203434</a>
-              </div>
-              <div class="comm-item">
-                <span class="comm-lbl">LINKEDIN:</span>
-                <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="comm-val">linkedin.com/in/jayant-shoundik</a>
-              </div>
-              <div class="comm-item">
-                <span class="comm-lbl">GITHUB:</span>
-                <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="comm-val">github.com/JayantShoundik</a>
+              <div class="contact-vectors-list">
+                <div class="cv-item">
+                  <span class="cv-label">EMAIL:</span>
+                  <a href="mailto:shoundikjayant@gmail.com" class="cv-link">shoundikjayant@gmail.com</a>
+                  <button class="cv-copy-btn" id="copy-email-btn" title="Copy email address">
+                    <span>COPY</span>
+                  </button>
+                </div>
+                <div class="cv-item">
+                  <span class="cv-label">PHONE:</span>
+                  <a href="tel:+917070203434" class="cv-link">+91 7070203434</a>
+                </div>
+                <div class="cv-item">
+                  <span class="cv-label">LINKEDIN:</span>
+                  <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="cv-link">linkedin.com/in/jayant-shoundik ↗</a>
+                </div>
+                <div class="cv-item">
+                  <span class="cv-label">GITHUB:</span>
+                  <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="cv-link">github.com/JayantShoundik ↗</a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="contact-quick-launch">
-            <div class="quick-launch-box">
-              <span class="ql-heading">EXPEDITE CONTACT</span>
-              <p class="ql-text">Instant one-click communication triggers:</p>
-              <div class="ql-buttons">
-                <a href="mailto:shoundikjayant@gmail.com?subject=Opportunity%20Inquiry%20-%20Jayant%20Shoundik" class="btn-stark btn-stark-primary btn-block">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  <span>TRANSMIT VIA EMAIL</span>
-                </a>
-                <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-outline btn-block">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
-                  <span>CONNECT ON LINKEDIN</span>
-                </a>
-                <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-block">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  <span>INSPECT SOURCE CODE</span>
-                </a>
+            <div class="contact-right-action-card">
+              <div class="white-action-box">
+                <h3 class="wab-title">Quick Connect</h3>
+                <p class="wab-sub">Direct access to schedule a technical discussion or send a message:</p>
+                <div class="wab-buttons">
+                  <a href="mailto:shoundikjayant@gmail.com?subject=Opportunity%20Inquiry%20-%20Jayant%20Shoundik" class="btn-full-orange">
+                    Launch Direct Email ↗
+                  </a>
+                  <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="btn-full-dark">
+                    Connect on LinkedIn ↗
+                  </a>
+                  <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="btn-full-outline">
+                    Inspect GitHub Repositories ↗
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -586,40 +600,41 @@ const streamTask = useTransition(async () => {
     </section>
   </main>
 
-  <!-- STARK HUD FOOTER -->
-  <footer class="stark-footer">
-    <div class="container footer-grid">
-      <div class="f-left">
-        <div class="f-logo-row">
-          <span class="f-badge">SYS_ID: JS-2026</span>
-          <span class="f-tagline">JAYANT SHOUNDIK // FRONTEND &amp; AI ARCHITECT</span>
-        </div>
-        <p class="f-copy">Built with Stark-Tech Obsidian UI, Arc-Reactor Visual Engine, and 60FPS Ambient Particles.</p>
+  <!-- =========================================================================
+       STUDIO FOOTER
+       ========================================================================= -->
+  <footer class="editorial-footer">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <span class="footer-logo">JayantShoundik<sup>®</sup></span>
+        <span class="footer-copy">© 2026 Jayant Shoundik. All Rights Reserved.</span>
       </div>
-      <div class="f-right">
-        <a href="#hero">RETURN TO TOP [↑]</a>
-        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer">GITHUB</a>
-        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
 
-  <!-- INTERACTIVE HUD PROJECT MODAL -->
+  <!-- =========================================================================
+       INTERACTIVE SYSTEM DETAIL MODAL
+       ========================================================================= -->
   <div class="modal-backdrop" id="project-modal" aria-hidden="true">
     <div class="modal-dialog">
       <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
       <div class="modal-content" id="modal-content">
-        <!-- Injected dynamically via JS -->
+        <!-- Injected via JavaScript dynamically -->
       </div>
     </div>
   </div>
 
-  <!-- Animated HUD Toast -->
-  <div class="hud-toast" id="toast">
+  <!-- Notification Toast -->
+  <div class="toast-popup" id="toast">
     <span class="toast-dot"></span>
-    <span class="toast-msg" id="toast-msg">COPIED TO CLIPBOARD</span>
+    <span class="toast-text" id="toast-msg">Email copied to clipboard: shoundikjayant@gmail.com</span>
   </div>
 
   <script src="app.js"></script>
