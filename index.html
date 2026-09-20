@@ -3,712 +3,580 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jayant Shoundik — AI Architect &amp; Software Engineer</title>
-  <meta name="description" content="Official portfolio of Jayant Shoundik — AI Engineer, Full-Stack Developer & Founding Engineer. Specialized in autonomous AI, satellite deep-tech, and scalable enterprise software.">
+  <title>JAYANT SHOUNDIK // FRONTEND &amp; AI ARCHITECT</title>
+  <meta name="description" content="Award-winning Stark-Tech inspired portfolio of Jayant Shoundik — Frontend Architect, Autonomous AI Engineer &amp; System Builder.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="light-studio-theme">
+<body class="stark-obsidian-theme">
 
-  <!-- Subtle grid and paper textures -->
-  <div class="studio-paper-texture"></div>
-  <div class="studio-grid-lines"></div>
+  <!-- Interactive Canvas Particle Field -->
+  <canvas id="ambient-canvas"></canvas>
 
-  <!-- SITE HEADER -->
-  <header class="studio-header" id="site-header">
+  <!-- Mouse Spotlight Illumination Overlay -->
+  <div class="cursor-spotlight" id="cursor-spotlight"></div>
+
+  <!-- STARK HUD NAVIGATION HEADER -->
+  <header class="hud-header" id="hud-header">
     <div class="container header-container">
-      <a href="#hero" class="studio-brand">
-        <span class="brand-capsule">JS</span>
-        <span class="brand-text">Jayant Shoundik<span class="dot">.</span></span>
+      <a href="#hero" class="hud-brand">
+        <div class="arc-mini-core">
+          <div class="arc-ring-pulse"></div>
+          <div class="arc-center-dot"></div>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-mark">JAYANT SHOUNDIK</span>
+          <span class="brand-sub">SYS // ARCHITECT_v2.6</span>
+        </div>
       </a>
 
-      <nav class="studio-nav" id="studio-nav">
-        <a href="#startups" class="nav-item">Startup</a>
-        <a href="#research" class="nav-item">Research &amp; SIH</a>
-        <a href="#ai-systems" class="nav-item">AI Systems</a>
-        <a href="#fullstack" class="nav-item">Full-Stack</a>
-        <a href="#experience" class="nav-item">Experience</a>
-        <a href="#honors" class="nav-item">Honors</a>
-        <a href="#skills" class="nav-item">Stack</a>
+      <nav class="hud-nav" id="hud-nav">
+        <a href="#projects" class="hud-nav-link"><span class="nav-idx">01</span> CASE STUDIES</a>
+        <a href="#expertise" class="hud-nav-link"><span class="nav-idx">02</span> EXPERTISE MATRIX</a>
+        <a href="#terminal" class="hud-nav-link"><span class="nav-idx">03</span> STARK TERMINAL</a>
+        <a href="#experience" class="hud-nav-link"><span class="nav-idx">04</span> TIMELINE</a>
+        <a href="#contact" class="hud-nav-link"><span class="nav-idx">05</span> TRANSMIT</a>
       </nav>
 
-      <div class="header-actions">
-        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="GitHub">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      <div class="header-status-group">
+        <div class="clock-ticker" id="utc-clock">UTC 00:00:00</div>
+        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="hud-icon-btn" title="GitHub System Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
         </a>
-        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="LinkedIn">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="hud-icon-btn" title="LinkedIn Intelligence">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
         </a>
-        <a href="#contact" class="btn-studio btn-studio-dark">Contact Me</a>
-        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a href="#contact" class="btn-stark btn-stark-glow">INITIATE DISPATCH</a>
+        <button class="mobile-hud-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION: THE ICONIC DUAL-IDENTITY SPLIT PORTRAIT -->
-    <section class="split-hero-section" id="hero">
-      <div class="container hero-split-container">
+    <!-- HERO SECTION: STARK ARC-REACTOR & EDITORIAL ARCHITECT -->
+    <section class="stark-hero-section" id="hero">
+      <div class="container hero-container">
         
-        <!-- Left Hero Column: Architect / Designer side -->
-        <div class="hero-role-block hero-left-role reveal-item">
-          <h1 class="role-wordmark">architect</h1>
-          <p class="role-desc">
-            AI engineer &amp; system architect designing autonomous agent pipelines, deep-tech intelligence, and intuitive human-AI interfaces.
+        <!-- Left: Editorial Typography & Bio -->
+        <div class="hero-text-col">
+          <div class="status-hud-chip">
+            <span class="stark-amber-dot"></span>
+            <span class="status-hud-label">SYSTEM ONLINE // OPEN FOR ELITE AI &amp; SWE ROLES</span>
+          </div>
+
+          <h1 class="hero-editorial-title">
+            <span class="title-line">JAYANT SHOUNDIK</span>
+            <span class="title-subline gradient-arc">FRONTEND &amp; AI ARCHITECT</span>
+          </h1>
+
+          <p class="hero-editorial-lead">
+            Principal builder engineering autonomous multi-agent pipelines, defense-grade geospatial analytics, and resilient distributed frontends. Designing high-throughput software where computational power meets high-end brand identity.
           </p>
-          <div class="role-badges">
-            <span class="subtle-pill">Autonomous Multi-Agent</span>
-            <span class="subtle-pill">Geospatial AI &amp; RAG</span>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-stark btn-stark-primary">
+              <span>EXPLORE CASE STUDIES</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#terminal" class="btn-stark btn-stark-terminal">
+              <span class="term-sym">&gt;_</span>
+              <span>LAUNCH STARK HUD</span>
+            </a>
+          </div>
+
+          <div class="hud-meta-grid">
+            <div class="meta-tag-item">
+              <span class="meta-lbl">ACADEMIC CREDENTIAL</span>
+              <span class="meta-val">B.Tech Web Tech • CGPA 8.9 (CGU)</span>
+            </div>
+            <div class="meta-tag-item">
+              <span class="meta-lbl">VENTURE LEAD</span>
+              <span class="meta-val">InnoGrid Prism AI Monorepo</span>
+            </div>
+            <div class="meta-tag-item">
+              <span class="meta-lbl">DEFENSE HACKATHON</span>
+              <span class="meta-val">NTRO SIH-26143 Nautrace</span>
+            </div>
           </div>
         </div>
 
-        <!-- Center Column: Dual-Split Portrait artwork -->
-        <div class="hero-portrait-column reveal-item">
-          <div class="portrait-card" id="portrait-card">
-            <img src="assets/hero-split.jpg" alt="Jayant Shoundik - Dual Identity Architect & Coder" class="portrait-img">
-            <div class="portrait-overlay-glow"></div>
-          </div>
+        <!-- Right: Arc-Reactor Portrait Frame -->
+        <div class="hero-visual-col">
+          <div class="arc-portrait-assembly">
+            
+            <!-- Holographic Rotating HUD Rings -->
+            <div class="arc-hologram-ring outer-ring"></div>
+            <div class="arc-hologram-ring middle-ring"></div>
+            <div class="arc-hologram-ring inner-ring"></div>
 
-          <!-- Live Status Bar below portrait -->
-          <div class="live-status-card">
-            <span class="status-indicator-dot"></span>
-            <span class="status-indicator-text">Available for High-Impact Software &amp; AI Roles</span>
-          </div>
-        </div>
+            <!-- Glowing Corner Reticles -->
+            <div class="corner-reticle top-left"></div>
+            <div class="corner-reticle top-right"></div>
+            <div class="corner-reticle bottom-left"></div>
+            <div class="corner-reticle bottom-right"></div>
 
-        <!-- Right Hero Column: Coder side -->
-        <div class="hero-role-block hero-right-role reveal-item">
-          <h2 class="role-wordmark coder-syntax">&lt;coder&gt;</h2>
-          <p class="role-desc">
-            Full-stack developer who crafts clean, resilient, and high-throughput code across modern microservices and frontends.
-          </p>
-          <div class="role-badges">
-            <span class="subtle-pill">Java &amp; Spring Boot</span>
-            <span class="subtle-pill">Python, React &amp; Go</span>
-          </div>
-        </div>
-      </div>
+            <!-- Portrait Container -->
+            <div class="arc-portrait-frame" id="hero-portrait">
+              <img src="assets/jayant-executive.jpg" alt="Jayant Shoundik — Executive Portrait" class="executive-img">
+              <div class="scanline-overlay"></div>
+              <div class="hud-ambient-tint"></div>
+            </div>
 
-      <!-- Quick Metrics Ribbon below the Hero -->
-      <div class="container">
-        <div class="metrics-ribbon reveal-item">
-          <div class="metric-item">
-            <span class="m-val">17+</span>
-            <span class="m-lbl">Repositories &amp; Projects</span>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric-item">
-            <span class="m-val">8.9</span>
-            <span class="m-lbl">CGPA • B.Tech Web Tech</span>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric-item">
-            <span class="m-val">2x</span>
-            <span class="m-lbl">National Winners (MUN &amp; Vision)</span>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric-item">
-            <span class="m-val">NTRO</span>
-            <span class="m-lbl">SIH-26143 Satellite Forensics</span>
+            <!-- Floating Metric Chips -->
+            <div class="floating-hud-pill pill-top-right">
+              <span class="hud-pill-tag">CODEBASE</span>
+              <span class="hud-pill-data">17+ Active Repos</span>
+            </div>
+
+            <div class="floating-hud-pill pill-bottom-left">
+              <span class="hud-pill-tag">INTELLIGENCE</span>
+              <span class="hud-pill-data">Gemini 2.5 RAG // LangGraph</span>
+            </div>
+
+            <div class="floating-hud-pill pill-bottom-right">
+              <span class="hud-pill-tag">HONORS</span>
+              <span class="hud-pill-data">MUN Highest Commendation</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 1: STARTUP JOURNEY (InnoGrid & Prism) -->
-    <section class="studio-section" id="startups">
+    <!-- SECTION 01: PROJECT CASE STUDIES -->
+    <section class="stark-section" id="projects">
       <div class="container">
-        <div class="section-divider-title">
-          <span>THE STARTUP JOURNEY</span>
-        </div>
-        <div class="section-lead-text">
-          <h2>Founding Engineering: <span class="highlight-text">InnoGrid &amp; Prism</span></h2>
-          <p>Architecting multi-modal autonomous marketing engines and business intelligence software from ground up.</p>
+        <div class="editorial-header">
+          <div class="editorial-num">01 // CASE STUDIES</div>
+          <h2 class="editorial-title">PRODUCTION SYSTEMS &amp; <span class="gradient-arc">DEEP-TECH</span></h2>
+          <p class="editorial-desc">End-to-end architectures engineered for multi-modal marketing, defense forensics, legal intelligence, and high-frequency algorithms.</p>
         </div>
 
-        <div class="studio-card startup-hero-card reveal-item">
-          <div class="startup-hero-grid">
-            <div class="startup-narrative">
-              <div class="pill-row">
-                <span class="pill-badge pill-purple">InnoGrid Venture</span>
-                <span class="pill-badge pill-green">Production Monorepo</span>
-                <span class="pill-badge pill-blue">Google Gemini 2.5</span>
+        <div class="case-studies-list">
+          
+          <!-- Case Study 1: Vidhan AI / Legal AI -->
+          <article class="case-study-item">
+            <div class="case-num-col">01.1</div>
+            <div class="case-content-col">
+              <div class="case-tag-row">
+                <span class="hud-badge badge-cyan">LEGAL AI &amp; STATUTES</span>
+                <span class="hud-badge badge-violet">LANGCHAIN + CHROMADB</span>
+                <span class="hud-badge badge-amber">PRODUCTION READY</span>
               </div>
-              <h3 class="card-heading">Prism — Autonomous AI Marketing Engine</h3>
-              <p class="card-body-text">
-                Prism is an autonomous platform converting static customer catalogs into hyper-personalized visual campaigns (visual cards, custom descriptions, and synthetic voice notes) delivered directly to VIP customers via WhatsApp.
+              <h3 class="case-heading">Vidhan AI &amp; Legal Assistant</h3>
+              <p class="case-summary">
+                An enterprise-grade autonomous legal synthesizer designed to ingest dense commercial contracts, statutory penal codes, and high-court rulings. Features domain-specific RAG embeddings to compute clause liability scores, surface risk exposure, and draft legally verifiable dispute motions.
+              </p>
+              
+              <div class="case-metrics-bar">
+                <div class="c-metric"><span class="val">&lt; 250ms</span><span class="lbl">Query Retrieval</span></div>
+                <div class="c-metric"><span class="val">100%</span><span class="lbl">Verifiable Statutory Citations</span></div>
+                <div class="c-metric"><span class="val">FastAPI</span><span class="lbl">Async Vector Ingestion</span></div>
+              </div>
+
+              <div class="case-actions">
+                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="legal-ai">
+                  <span>SYSTEM ARCHITECTURE SPECS</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <a href="https://github.com/JayantShoundik/legal-ai-assistant" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
+                  <span>GITHUB REPO</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 2: Columbus / AI Research Agent -->
+          <article class="case-study-item">
+            <div class="case-num-col">01.2</div>
+            <div class="case-content-col">
+              <div class="case-tag-row">
+                <span class="hud-badge badge-violet">AUTONOMOUS MULTI-AGENT</span>
+                <span class="hud-badge badge-cyan">REACT 19 STREAMING</span>
+                <span class="hud-badge badge-green">FIBREBASE CLOUD</span>
+              </div>
+              <h3 class="case-heading">Columbus — Autonomous AI Research Agent</h3>
+              <p class="case-summary">
+                An intelligent autonomous research platform with token-by-token streaming markdown rendering, recursive thought decomposition, and web citation grounding. Enables researchers to orchestrate multi-agent investigation trees and export structured synthesis documents with zero latency.
               </p>
 
-              <div class="arch-bullets">
-                <div class="bullet-item">
-                  <div class="bullet-dot"></div>
-                  <div><strong>React UI Dashboard (Port 5173):</strong> Real-time dataset management, brand kit setup (KYC), visual styling, and campaign dispatch review.</div>
-                </div>
-                <div class="bullet-item">
-                  <div class="bullet-dot"></div>
-                  <div><strong>FastAPI AI Brain (Port 6600):</strong> RAG-driven Gemini 2.5 prompt engine matching product recommendations to customer profiles with automated media compilation.</div>
-                </div>
-                <div class="bullet-item">
-                  <div class="bullet-dot"></div>
-                  <div><strong>Gateway &amp; Synthesis (Port 6700):</strong> Async queue processors communicating with Sarvam AI for voice-note generation and Twilio WhatsApp delivery.</div>
-                </div>
-                <div class="bullet-item">
-                  <div class="bullet-dot"></div>
-                  <div><strong>Spring Boot Core (Port 6500):</strong> Core authentication gateway, managing user roles, organizations, and saving campaign runs.</div>
-                </div>
+              <div class="case-metrics-bar">
+                <div class="c-metric"><span class="val">React 19</span><span class="lbl">Framer Motion Workspace</span></div>
+                <div class="c-metric"><span class="val">Multi-Agent</span><span class="lbl">Decomposition &amp; Grounding</span></div>
+                <div class="c-metric"><span class="val">SSE Stream</span><span class="lbl">Real-time Markdown Parsing</span></div>
               </div>
 
-              <div class="tag-row">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Vite</span>
-                <span class="tech-tag">Spring Boot</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Gemini 2.5</span>
-                <span class="tech-tag">Sarvam AI</span>
-                <span class="tech-tag">Twilio API</span>
+              <div class="case-actions">
+                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="research-frontend">
+                  <span>SYSTEM ARCHITECTURE SPECS</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <a href="https://github.com/JayantShoundik/frontend" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
+                  <span>GITHUB REPO</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 3: Innogrid MarketMind & Prism -->
+          <article class="case-study-item">
+            <div class="case-num-col">01.3</div>
+            <div class="case-content-col">
+              <div class="case-tag-row">
+                <span class="hud-badge badge-cyan">STARTUP MONOREPO</span>
+                <span class="hud-badge badge-amber">GEMINI 2.5 + TWILIO</span>
+                <span class="hud-badge badge-violet">SARVAM SPEECH</span>
+              </div>
+              <h3 class="case-heading">InnoGrid Prism // Autonomous Marketing Engine</h3>
+              <p class="case-summary">
+                Autonomous campaign orchestration platform transforming raw catalog data into hyper-personalized visual cards, custom marketing copy, and synthetic voice notes dispatched directly to VIP clientele through automated WhatsApp gateways. Microservices monorepo combining React, Spring Boot, and FastAPI.
+              </p>
+
+              <div class="case-metrics-bar">
+                <div class="c-metric"><span class="val">4 Nodes</span><span class="lbl">Microservices Mesh</span></div>
+                <div class="c-metric"><span class="val">Gemini 2.5</span><span class="lbl">Context Persona Matching</span></div>
+                <div class="c-metric"><span class="val">WhatsApp</span><span class="lbl">Zero-Touch VIP Dispatch</span></div>
               </div>
 
-              <div class="card-action-bar">
-                <button class="btn-studio btn-studio-dark btn-sm open-modal-btn" data-project="prism">
-                  <span>View System Architecture</span>
+              <div class="case-actions">
+                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="prism">
+                  <span>SYSTEM ARCHITECTURE SPECS</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <a href="https://github.com/JayantShoundik/prism" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
+                  <span>GITHUB REPO</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 4: Nautrace SIH-26143 NTRO -->
+          <article class="case-study-item">
+            <div class="case-num-col">01.4</div>
+            <div class="case-content-col">
+              <div class="case-tag-row">
+                <span class="hud-badge badge-red">DEFENSE GEOSPATIAL // NTRO</span>
+                <span class="hud-badge badge-cyan">SENTINEL-1 SAR</span>
+                <span class="hud-badge badge-violet">OPENDRIFT FORENSICS</span>
+              </div>
+              <h3 class="case-heading">Nautrace — Satellite Oil-Spill Attribution</h3>
+              <p class="case-summary">
+                National Technical Research Organisation (NTRO) challenge. End-to-end maritime forensic pipeline detecting dual-pol SAR slicks with SegFormer, executing hydrodynamic Lagrangian reverse-drift modeling (Copernicus Marine SMOC + ECMWF), and calculating space-time probabilistic AIS ship attribution.
+              </p>
+
+              <div class="case-metrics-bar">
+                <div class="c-metric"><span class="val">SAR GRD</span><span class="lbl">Sentinel-1 Dual-Pol</span></div>
+                <div class="c-metric"><span class="val">SMOC Drift</span><span class="lbl">Stokes &amp; Tides Current Physics</span></div>
+                <div class="c-metric"><span class="val">AIS Forensic</span><span class="lbl">Candidate Vessel Attribution</span></div>
+              </div>
+
+              <div class="case-actions">
+                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="nautrace">
+                  <span>SYSTEM ARCHITECTURE SPECS</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
             </div>
+          </article>
 
-            <div class="startup-blueprint-box">
-              <div class="blueprint-header">
-                <div class="window-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <span class="blueprint-caption">prism-engine // architecture.mesh</span>
+          <!-- Case Study 5: Squarieean & Stock Analytics -->
+          <article class="case-study-item">
+            <div class="case-num-col">01.5</div>
+            <div class="case-content-col">
+              <div class="case-tag-row">
+                <span class="hud-badge badge-amber">QUANTITATIVE ALGORITHMS</span>
+                <span class="hud-badge badge-cyan">NSE EQUITIES</span>
+                <span class="hud-badge badge-violet">TABLEAU ANALYTICS</span>
               </div>
-              <div class="blueprint-body">
-                <pre><code><span class="code-comment">// Distributed Monorepo Services</span>
-<span class="code-keyword">Client:</span> React UI Dashboard [Port 5173]
-  <span class="code-arrow">├──></span> <span class="code-hl">Spring Boot Core</span> [:6500 Auth &amp; DB]
-  <span class="code-arrow">└──></span> <span class="code-hl">FastAPI Gateway</span> [:6700 Job Queue]
-        <span class="code-arrow">├──></span> <span class="code-hl-blue">FastAPI AI Brain</span> [:6600 Gemini RAG]
-        <span class="code-arrow">├──></span> <span class="code-hl-purple">Sarvam AI</span> [Voice Synthesis]
-        <span class="code-arrow">└──></span> <span class="code-hl-green">Twilio WhatsApp</span> [VIP Delivery]</code></pre>
-                <div class="blueprint-stats">
-                  <div class="bp-stat">
-                    <span class="bp-num">4</span>
-                    <span class="bp-lbl">Microservices</span>
-                  </div>
-                  <div class="bp-stat">
-                    <span class="bp-num">100%</span>
-                    <span class="bp-lbl">Async Queues</span>
-                  </div>
-                  <div class="bp-stat">
-                    <span class="bp-num">Multi-Modal</span>
-                    <span class="bp-lbl">Card + Audio</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: RESEARCH & DEEP-TECH (SIH 26143 & AI RESEARCH AGENT) -->
-    <section class="studio-section" id="research">
-      <div class="container">
-        <div class="section-divider-title">
-          <span>RESEARCH &amp; DEFENSE LAB</span>
-        </div>
-        <div class="section-lead-text">
-          <h2>Geospatial AI &amp; <span class="highlight-text">Autonomous Research</span></h2>
-          <p>Solving complex maritime forensics for NTRO (SIH 26143) and autonomous agent workflows.</p>
-        </div>
-
-        <div class="dual-cards-grid">
-          <!-- Card 1: Nautrace SIH NTRO -->
-          <div class="studio-card project-card reveal-item">
-            <div class="pill-row">
-              <span class="pill-badge pill-red">SIH 26143 • NTRO Challenge</span>
-              <span class="pill-badge pill-blue">Geospatial Physics</span>
-            </div>
-            <h3 class="card-heading">Nautrace — Satellite Oil-Spill Detection &amp; Hindcasting</h3>
-            <p class="card-body-text">
-              A comprehensive maritime forensic pipeline engineered for the National Technical Research Organisation (NTRO). Synthesizes SAR satellite segmentation, physical ocean drift modeling, and AIS correlation to accurately attribute oceanic pollution incidents.
-            </p>
-            <div class="research-highlights-box">
-              <div class="r-point">🛰️ <strong>Sentinel-1 SAR Detection:</strong> Dual-pol (VV/VH) segmentation using SegFormer &amp; U-Net with Eastern Mediterranean benchmark validation.</div>
-              <div class="r-point">🌊 <strong>Lagrangian Drift Hindcasting:</strong> OpenDrift / OpenOil simulation driven by Copernicus Marine SMOC surface currents and ECMWF winds.</div>
-              <div class="r-point">🚢 <strong>Probabilistic AIS Attribution:</strong> Space-time trajectory correlation engine matching candidate ships from historical AIS feeds.</div>
-            </div>
-            <div class="tag-row">
-              <span class="tech-tag">Sentinel-1 SAR</span>
-              <span class="tech-tag">SegFormer</span>
-              <span class="tech-tag">OpenDrift</span>
-              <span class="tech-tag">Copernicus SMOC</span>
-              <span class="tech-tag">AIS Trajectories</span>
-              <span class="tech-tag">Python</span>
-            </div>
-            <div class="card-bottom-action">
-              <button class="btn-studio btn-studio-outline btn-sm open-modal-btn" data-project="nautrace">
-                <span>View Forensic Pipeline Breakdown</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 2: Research AI Agent -->
-          <div class="studio-card project-card reveal-item">
-            <div class="pill-row">
-              <span class="pill-badge pill-purple">Autonomous Agents</span>
-              <span class="pill-badge pill-green">Streaming UI</span>
-            </div>
-            <h3 class="card-heading">Research AI Agent &amp; Real-Time Frontend</h3>
-            <p class="card-body-text">
-              An intelligent autonomous researcher platform with dynamic token-streaming markdown rendering, multi-step thought visualization, and collaborative workspace tooling for synthesizing dense scholarly documents.
-            </p>
-            <div class="research-highlights-box">
-              <div class="r-point">⚡ <strong>React 19 &amp; Framer Motion:</strong> Micro-interaction driven dashboard with animated agent reasoning traces and canvas views.</div>
-              <div class="r-point">🧠 <strong>Multi-Agent Reasoning:</strong> Orchestrated task decomposition, web citation grounding, and iterative draft refinement.</div>
-              <div class="r-point">🔒 <strong>Firebase Enterprise Auth:</strong> Secure multi-tenant user workspaces, document storage, and encrypted session logs.</div>
-            </div>
-            <div class="tag-row">
-              <span class="tech-tag">React 19</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Framer Motion</span>
-              <span class="tech-tag">Lucide</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">Python Agents</span>
-            </div>
-            <div class="card-bottom-action">
-              <button class="btn-studio btn-studio-outline btn-sm open-modal-btn" data-project="research-frontend">
-                <span>View Agent Architecture</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: PRODUCTION AI & GENAI SYSTEMS -->
-    <section class="studio-section" id="ai-systems">
-      <div class="container">
-        <div class="section-divider-title">
-          <span>PRODUCTION AI &amp; GENAI</span>
-        </div>
-        <div class="section-lead-text">
-          <h2>High-Impact AI &amp; <span class="highlight-text">Decision Engines</span></h2>
-          <p>Dispute resolution, recommendation systems, and automated legal assistants.</p>
-        </div>
-
-        <div class="trio-cards-grid">
-          <!-- BimaNyaya -->
-          <div class="studio-card project-card reveal-item">
-            <div class="pill-row">
-              <span class="pill-badge pill-green">InsurTech AI</span>
-              <span class="pill-badge pill-blue">TanStack + Go</span>
-            </div>
-            <h3 class="card-heading">BimaNyaya (बीमान्याय)</h3>
-            <p class="card-sub-role">AI Insurance Dispute &amp; Redressal Platform</p>
-            <p class="card-body-text">
-              Platform protecting policyholders against unfair health claim rejections and proportionate room-rent capping penalties. Features OCR bill extraction, deterministic legal rule engines, and RAG over IRDAI master circulars.
-            </p>
-            <div class="tag-row">
-              <span class="tech-tag">TanStack Start</span>
-              <span class="tech-tag">React 19</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Go</span>
-              <span class="tech-tag">Convex DB</span>
-              <span class="tech-tag">IRDAI RAG</span>
-            </div>
-            <div class="card-bottom-action">
-              <a href="https://github.com/JayantShoundik/BimaNyaya" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outline btn-sm">
-                <span>GitHub</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <button class="btn-studio btn-studio-ghost btn-sm open-modal-btn" data-project="bimanyaya">Details</button>
-            </div>
-          </div>
-
-          <!-- SmartRecSys -->
-          <div class="studio-card project-card reveal-item">
-            <div class="pill-row">
-              <span class="pill-badge pill-blue">Machine Learning</span>
-              <span class="pill-badge pill-purple">Vector ANN</span>
-            </div>
-            <h3 class="card-heading">SmartRecSys</h3>
-            <p class="card-sub-role">Real-Time Neural Recommendation Engine</p>
-            <p class="card-body-text">
-              High-throughput recommendation architecture combining collaborative filtering, deep content embeddings, and real-time candidate retrieval. Optimized for sub-10ms latency across large catalogs.
-            </p>
-            <div class="tag-row">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">PyTorch</span>
-              <span class="tech-tag">FAISS</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Redis</span>
-            </div>
-            <div class="card-bottom-action">
-              <a href="https://github.com/JayantShoundik/SmartRecSys" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outline btn-sm">
-                <span>GitHub</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <button class="btn-studio btn-studio-ghost btn-sm open-modal-btn" data-project="smartrecsys">Details</button>
-            </div>
-          </div>
-
-          <!-- Legal AI Assistant -->
-          <div class="studio-card project-card reveal-item">
-            <div class="pill-row">
-              <span class="pill-badge pill-purple">NLP &amp; LLMs</span>
-              <span class="pill-badge pill-green">Statute Q&amp;A</span>
-            </div>
-            <h3 class="card-heading">Legal AI Assistant</h3>
-            <p class="card-sub-role">Statutory Contract Analyzer &amp; Q&amp;A Engine</p>
-            <p class="card-body-text">
-              Intelligent legal assistant ingesting contracts and statutes to answer complex queries, flag liability exposure, and generate verified draft replies with pinpoint legal citations.
-            </p>
-            <div class="tag-row">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">LangChain</span>
-              <span class="tech-tag">ChromaDB</span>
-              <span class="tech-tag">Transformers</span>
-              <span class="tech-tag">FastAPI</span>
-            </div>
-            <div class="card-bottom-action">
-              <a href="https://github.com/JayantShoundik/legal-ai-assistant" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outline btn-sm">
-                <span>GitHub</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <button class="btn-studio btn-studio-ghost btn-sm open-modal-btn" data-project="legal-ai">Details</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: FULL-STACK & ENTERPRISE PLATFORMS -->
-    <section class="studio-section" id="fullstack">
-      <div class="container">
-        <div class="section-divider-title">
-          <span>FULL-STACK &amp; ENTERPRISE PLATFORMS</span>
-        </div>
-        <div class="section-lead-text">
-          <h2>Enterprise Systems &amp; <span class="highlight-text">Financial Analytics</span></h2>
-          <p>Relational databases, normalized schemas, and quantitative data pipelines.</p>
-        </div>
-
-        <div class="dual-cards-grid">
-          <!-- Healthcare Management System -->
-          <div class="studio-card project-card reveal-item">
-            <div class="pill-row">
-              <span class="pill-badge pill-green">Java Enterprise</span>
-              <span class="pill-badge pill-blue">Spring Boot</span>
-            </div>
-            <h3 class="card-heading">Enterprise Healthcare Management System</h3>
-            <p class="card-body-text">
-              Production hospital operations architecture built with Spring Boot, Hibernate/JPA, and normalized MySQL. Features multi-role RBAC across patient portals, physician consoles, and administrator KPI reporting.
-            </p>
-            <ul class="clean-checklist">
-              <li>Multi-role RBAC: Patients, Doctors, and Administrators with isolated permissions</li>
-              <li>Normalized schema handling patient records, appointments, and diagnostic workflows</li>
-              <li>Spring Security session management and transactional integrity</li>
-            </ul>
-            <div class="tag-row">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">Hibernate / JPA</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">REST APIs</span>
-            </div>
-            <div class="card-bottom-action">
-              <a href="https://github.com/JayantShoundik/HealthcareSystem" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outline btn-sm">
-                <span>GitHub</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <button class="btn-studio btn-studio-ghost btn-sm open-modal-btn" data-project="healthcare">Details</button>
-            </div>
-          </div>
-
-          <!-- Stock Analytics Dashboard -->
-          <div class="studio-card project-card reveal-item">
-            <div class="pill-row">
-              <span class="pill-badge pill-purple">Quantitative Finance</span>
-              <span class="pill-badge pill-green">ML &amp; Tableau</span>
-            </div>
-            <h3 class="card-heading">Stock Analytics Dashboard &amp; Algorithmic Suite</h3>
-            <p class="card-body-text">
-              Quantitative finance intelligence suite ingesting NSE equities data, engineering momentum indicators (SMA, EMA, RSI, support/resistance levels), and applying ML regression for trend forecasting. Integrated with Tableau.
-            </p>
-            <ul class="clean-checklist">
-              <li>Automated data pipelines processing NSE equity ticks and volume anomalies</li>
-              <li>Interactive Tableau dashboard comparing NIFTY 50 benchmarks against blue-chip stocks</li>
-              <li>Multi-lot investment calculators for average price, profit/loss, and portfolio rebalancing</li>
-            </ul>
-            <div class="tag-row">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Pandas</span>
-              <span class="tech-tag">NumPy</span>
-              <span class="tech-tag">Scikit-Learn</span>
-              <span class="tech-tag">Tableau</span>
-              <span class="tech-tag">Flask</span>
-            </div>
-            <div class="card-bottom-action">
-              <a href="https://github.com/JayantShoundik/stock_analytics_dashboard" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outline btn-sm">
-                <span>GitHub</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <button class="btn-studio btn-studio-ghost btn-sm open-modal-btn" data-project="stock-analytics">Details</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: INDUSTRY EXPERIENCE -->
-    <section class="studio-section" id="experience">
-      <div class="container">
-        <div class="section-divider-title">
-          <span>PROFESSIONAL EXPERIENCE</span>
-        </div>
-        <div class="section-lead-text">
-          <h2>Engineering in <span class="highlight-text">High-Velocity Environments</span></h2>
-          <p>Real-world delivery in corporate software development and startup teams.</p>
-        </div>
-
-        <div class="experience-timeline">
-          <!-- Role 1: Satpathy Solutions -->
-          <div class="exp-item reveal-item">
-            <div class="exp-time-col">
-              <span class="exp-date">Present</span>
-              <span class="exp-location">Bhubaneswar, India</span>
-            </div>
-            <div class="exp-content-col">
-              <h3 class="exp-title">Software Developer Intern</h3>
-              <div class="exp-company">Satpathy Solutions</div>
-              <p class="exp-desc">
-                Engaged in end-to-end development, integration testing, and deployment phases of core enterprise modules. Collaborating directly with the Founder and senior engineering leads in agile sprints and code refactoring workflows.
+              <h3 class="case-heading">Squarieean &amp; Stock Analytics Suite</h3>
+              <p class="case-summary">
+                Quantitative market intelligence pipeline ingesting National Stock Exchange (NSE) equity data, generating automated momentum features (SMA, EMA, RSI, volume breakout thresholds), training ML regression price forecasters, and rendering comparative BI dashboards.
               </p>
-              <div class="tag-row">
-                <span class="tech-tag">Enterprise Modules</span>
-                <span class="tech-tag">Integration Testing</span>
-                <span class="tech-tag">Agile Delivery</span>
-                <span class="tech-tag">DPDP Compliance</span>
+
+              <div class="case-metrics-bar">
+                <div class="c-metric"><span class="val">Python</span><span class="lbl">Pandas / NumPy Pipelines</span></div>
+                <div class="c-metric"><span class="val">ML Models</span><span class="lbl">Scikit Trend Regression</span></div>
+                <div class="c-metric"><span class="val">Tableau</span><span class="lbl">Interactive NIFTY 50 Benchmarks</span></div>
               </div>
+
+              <div class="case-actions">
+                <button class="btn-stark btn-stark-outline btn-sm open-modal-btn" data-project="stock-analytics">
+                  <span>SYSTEM ARCHITECTURE SPECS</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <a href="https://github.com/JayantShoundik/stock_analytics_dashboard" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-sm">
+                  <span>GITHUB REPO</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: EXPERTISE MATRIX (INTERACTIVE VISUAL NODES) -->
+    <section class="stark-section" id="expertise">
+      <div class="container">
+        <div class="editorial-header">
+          <div class="editorial-num">02 // SYSTEM CAPABILITIES</div>
+          <h2 class="editorial-title">EXPERTISE <span class="gradient-arc">MATRIX</span></h2>
+          <p class="editorial-desc">Click any technical node to initialize the HUD inspector for real-time architectural insights, role implementations, and syntax benchmarks.</p>
+        </div>
+
+        <div class="expertise-quad-grid">
+          
+          <!-- Category 1: Frontend Architecture -->
+          <div class="hud-category-panel">
+            <div class="panel-header">
+              <span class="cat-code">[SYS_01]</span>
+              <h3>FRONTEND ARCHITECTURE</h3>
+            </div>
+            <div class="interactive-nodes-container">
+              <button class="tech-node active-node" data-node="react">React 19</button>
+              <button class="tech-node" data-node="nextjs">Next.js</button>
+              <button class="tech-node" data-node="tailwind">Tailwind CSS</button>
+              <button class="tech-node" data-node="canvas">HTML5 Canvas</button>
+              <button class="tech-node" data-node="framermotion">Framer Motion</button>
+              <button class="tech-node" data-node="typescript">TypeScript</button>
             </div>
           </div>
 
-          <!-- Role 2: InnoGrid Startup -->
-          <div class="exp-item reveal-item">
-            <div class="exp-time-col">
-              <span class="exp-date">Active</span>
-              <span class="exp-location">Remote / Startup</span>
+          <!-- Category 2: AI & LangGraph -->
+          <div class="hud-category-panel">
+            <div class="panel-header">
+              <span class="cat-code">[SYS_02]</span>
+              <h3>AI, LANGGRAPH &amp; RAG</h3>
             </div>
-            <div class="exp-content-col">
-              <h3 class="exp-title">Core Founding Engineer &amp; AI Lead</h3>
-              <div class="exp-company">InnoGrid (Prism &amp; InnoGrid BI)</div>
-              <p class="exp-desc">
-                Spearheaded the frontend and AI pipeline architecture for Prism (Autonomous Marketing Engine) and InnoGrid BI. Designed multi-modal campaign generation with Google Gemini 2.5, Sarvam AI speech synthesis, and Twilio WhatsApp dispatch pipelines.
+            <div class="interactive-nodes-container">
+              <button class="tech-node" data-node="gemini">Google Gemini 2.5</button>
+              <button class="tech-node" data-node="langgraph">LangGraph Agents</button>
+              <button class="tech-node" data-node="rag">Statute / Legal RAG</button>
+              <button class="tech-node" data-node="chromadb">ChromaDB Vector</button>
+              <button class="tech-node" data-node="pytorch">PyTorch / Scikit</button>
+              <button class="tech-node" data-node="sarvam">Sarvam AI Speech</button>
+            </div>
+          </div>
+
+          <!-- Category 3: Java & Enterprise Backend -->
+          <div class="hud-category-panel">
+            <div class="panel-header">
+              <span class="cat-code">[SYS_03]</span>
+              <h3>JAVA &amp; ENTERPRISE BACKEND</h3>
+            </div>
+            <div class="interactive-nodes-container">
+              <button class="tech-node" data-node="springboot">Spring Boot 3</button>
+              <button class="tech-node" data-node="fastapi">FastAPI (Python)</button>
+              <button class="tech-node" data-node="hibernate">Hibernate / JPA</button>
+              <button class="tech-node" data-node="mysql">MySQL (Normalized)</button>
+              <button class="tech-node" data-node="microservices">Microservices Mesh</button>
+              <button class="tech-node" data-node="rbac">Enterprise RBAC</button>
+            </div>
+          </div>
+
+          <!-- Category 4: DevOps & Cloud -->
+          <div class="hud-category-panel">
+            <div class="panel-header">
+              <span class="cat-code">[SYS_04]</span>
+              <h3>DEVOPS &amp; CLOUD PLATFORMS</h3>
+            </div>
+            <div class="interactive-nodes-container">
+              <button class="tech-node" data-node="docker">Docker Containers</button>
+              <button class="tech-node" data-node="githubactions">GitHub Actions CI</button>
+              <button class="tech-node" data-node="firebase">Firebase Auth</button>
+              <button class="tech-node" data-node="tableau">Tableau BI</button>
+              <button class="tech-node" data-node="twilio">Twilio Messaging</button>
+              <button class="tech-node" data-node="linux">Linux / POSIX Shell</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic HUD Node Inspector Output -->
+        <div class="node-inspector-box" id="node-inspector">
+          <div class="inspector-header">
+            <div class="insp-tag-badge" id="insp-badge">ACTIVE NODE // REACT 19</div>
+            <span class="insp-title" id="insp-name">React 19 &amp; Concurrent Architecture</span>
+            <div class="insp-status">● OPTIMIZED PRODUCTION</div>
+          </div>
+          <p class="insp-desc" id="insp-desc">
+            Implemented in Columbus and InnoGrid Prism for asynchronous token streaming, dynamic UI rendering, and sub-millisecond DOM transitions without hydration overhead.
+          </p>
+          <div class="insp-code-block">
+            <pre><code id="insp-code">// React 19 Concurrent Dispatch Pattern
+const streamTask = useTransition(async () => {
+  const stream = await orchestrateAgentPipeline({ input, mode: 'DEEP_RESEARCH' });
+  for await (const chunk of stream) {
+    updateWorkspaceBuffer(prev => prev + chunk.token);
+  }
+});</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: STARK HUD COMMAND TERMINAL -->
+    <section class="stark-section" id="terminal">
+      <div class="container">
+        <div class="editorial-header">
+          <div class="editorial-num">03 // STARK INTERFACE</div>
+          <h2 class="editorial-title">STARK HUD <span class="gradient-arc">TERMINAL</span></h2>
+          <p class="editorial-desc">Run direct queries against the Jayant Shoundik knowledge graph. Type <code class="inline-code">help</code> to inspect all system directives.</p>
+        </div>
+
+        <div class="stark-cli-terminal">
+          <div class="cli-top-bar">
+            <div class="cli-buttons">
+              <span class="cli-btn c-red"></span>
+              <span class="cli-btn c-amber"></span>
+              <span class="cli-btn c-green"></span>
+            </div>
+            <span class="cli-title">stark-hud@jayantshoundik:~ (bash)</span>
+            <span class="cli-active-tag">SYS_STATUS: 100% OPERATIONAL</span>
+          </div>
+
+          <div class="cli-output" id="cli-output">
+            <div class="cli-line banner-line">========================================================================</div>
+            <div class="cli-line banner-line">⚡ STARK-TECH OPERATIONAL TERMINAL // JAYANT SHOUNDIK v2.6</div>
+            <div class="cli-line banner-line">Type 'help' for available directives. Try 'projects', 'skills', 'contact', 'arc'.</div>
+            <div class="cli-line banner-line">========================================================================</div>
+          </div>
+
+          <form class="cli-input-form" id="cli-form">
+            <span class="cli-prompt">stark://jayant&gt;</span>
+            <input type="text" class="cli-input" id="cli-input" placeholder="Type a command (e.g. help, projects, skills, contact)..." autocomplete="off" spellcheck="false">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: PROFESSIONAL TIMELINE & ACCREDITATIONS -->
+    <section class="stark-section" id="experience">
+      <div class="container">
+        <div class="editorial-header">
+          <div class="editorial-num">04 // TRACK RECORD</div>
+          <h2 class="editorial-title">TIMELINE &amp; <span class="gradient-arc">ACCREDITATIONS</span></h2>
+          <p class="editorial-desc">Engineering leadership, corporate internships, and diplomatic debate accolades.</p>
+        </div>
+
+        <div class="timeline-hud-container">
+          
+          <!-- Timeline 1: Satpathy Solutions -->
+          <div class="timeline-hud-card">
+            <div class="t-date-chip">PRESENT // 2026</div>
+            <div class="t-body">
+              <span class="t-role">SOFTWARE DEVELOPER INTERN</span>
+              <span class="t-org">Satpathy Solutions • Bhubaneswar, India</span>
+              <p class="t-text">
+                Developing core enterprise modules, executing end-to-end integration tests, and maintaining DPDP Act 2023 compliance across client-facing production systems in collaborative agile sprints.
               </p>
-              <div class="tag-row">
-                <span class="tech-tag">React 19 &amp; Vite</span>
-                <span class="tech-tag">FastAPI AI Brain</span>
-                <span class="tech-tag">Multi-Modal GenAI</span>
-                <span class="tech-tag">Microservices Mesh</span>
-              </div>
+            </div>
+          </div>
+
+          <!-- Timeline 2: InnoGrid -->
+          <div class="timeline-hud-card">
+            <div class="t-date-chip">ACTIVE VENTURE</div>
+            <div class="t-body">
+              <span class="t-role">CORE FOUNDING ENGINEER &amp; AI LEAD</span>
+              <span class="t-org">InnoGrid (Prism &amp; MarketMind)</span>
+              <p class="t-text">
+                Spearheading frontend and AI pipeline architecture. Engineered multi-modal campaign generation with Google Gemini 2.5, Sarvam AI voice synthesis, and Twilio WhatsApp dispatch.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 3: MUN Highest Commendation -->
+          <div class="timeline-hud-card">
+            <div class="t-date-chip">ACCOLADE // FIRST PLACE</div>
+            <div class="t-body">
+              <span class="t-role">WINNER — CGU MODEL UNITED NATIONS (MUN)</span>
+              <span class="t-org">Highest Commendation Award</span>
+              <p class="t-text">
+                Awarded for exceptional diplomacy, structured argumentation, policy-driven debate, resolution drafting, and committee leadership across simulated geopolitical councils.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 4: Tech Vision 2047 Winner -->
+          <div class="timeline-hud-card">
+            <div class="t-date-chip">ACCOLADE // FIRST PLACE</div>
+            <div class="t-body">
+              <span class="t-role">WINNER — TECH VISION 2047 COMPETITION</span>
+              <span class="t-org">National Technological Roadmap</span>
+              <p class="t-text">
+                Formulated a strategic roadmap detailing AI-driven automation, sovereign digital systems, and computational scalability shaping India's tech landscape by 2047.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: KEY HONORS & LEADERSHIP -->
-    <section class="studio-section" id="honors">
+    <!-- SECTION 05: SECURE DISPATCH & TRANSMIT -->
+    <section class="stark-section" id="contact">
       <div class="container">
-        <div class="section-divider-title">
-          <span>HONORS &amp; LEADERSHIP</span>
-        </div>
-        <div class="section-lead-text">
-          <h2>Diplomacy, Innovation &amp; <span class="highlight-text">Competitions</span></h2>
-          <p>National awards recognized for policy debate, diplomatic negotiation, and technological foresight.</p>
+        <div class="editorial-header">
+          <div class="editorial-num">05 // SECURE DISPATCH</div>
+          <h2 class="editorial-title">TRANSMIT <span class="gradient-arc">COMMUNICATION</span></h2>
+          <p class="editorial-desc">Open channel for high-priority software engineering roles, founding AI partnerships, and technical inquiries.</p>
         </div>
 
-        <div class="trio-cards-grid">
-          <!-- Honor 1: MUN -->
-          <div class="studio-card honor-card reveal-item">
-            <div class="honor-badge gold-accent">Highest Commendation</div>
-            <h3 class="card-heading">Winner – CGU Model United Nations (MUN)</h3>
-            <p class="card-body-text">
-              Awarded the <strong>Highest Commendation</strong> for exceptional diplomacy, structured argumentation, policy-driven debate, resolution drafting, and multilateral committee coordination across high-stakes geopolitical simulations.
-            </p>
-            <div class="tag-row">
-              <span class="tech-tag">Geopolitical Diplomacy</span>
-              <span class="tech-tag">Strategic Negotiation</span>
-              <span class="tech-tag">Resolution Drafting</span>
+        <div class="stark-contact-hud">
+          <div class="contact-terminal-info">
+            <div class="hud-status-row">
+              <span class="stark-amber-dot"></span>
+              <span class="c-tag">DIRECT TRANSMISSION CHANNEL</span>
             </div>
-          </div>
-
-          <!-- Honor 2: Tech Vision 2047 -->
-          <div class="studio-card honor-card reveal-item">
-            <div class="honor-badge blue-accent">First Place Winner</div>
-            <h3 class="card-heading">Winner – Tech Vision Competition</h3>
-            <p class="card-body-text">
-              Awarded First Place on the national theme <em>"India’s Tech Vision 2047"</em>. Formulated a comprehensive strategic technology roadmap outlining AI-driven automation, sovereign digital systems, and scalable computational pipelines.
-            </p>
-            <div class="tag-row">
-              <span class="tech-tag">India Tech Vision 2047</span>
-              <span class="tech-tag">AI Automation Roadmap</span>
-              <span class="tech-tag">Keynote Presentation</span>
-            </div>
-          </div>
-
-          <!-- Honor 3: SIH Qualifier -->
-          <div class="studio-card honor-card reveal-item">
-            <div class="honor-badge green-accent">Internal Qualifier</div>
-            <h3 class="card-heading">Smart India Hackathon (SIH) Qualifier</h3>
-            <p class="card-body-text">
-              Qualified through internal technical rounds for <strong>NTRO Problem Statement 26143</strong> with project <strong>Nautrace</strong> — satellite SAR marine pollution detection and Lagrangian hydrodynamic hindcasting.
-            </p>
-            <div class="tag-row">
-              <span class="tech-tag">SIH 26143</span>
-              <span class="tech-tag">NTRO Problem</span>
-              <span class="tech-tag">Satellite Physics</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 7: TECHNICAL CAPABILITIES -->
-    <section class="studio-section" id="skills">
-      <div class="container">
-        <div class="section-divider-title">
-          <span>TECHNICAL CAPABILITIES</span>
-        </div>
-        <div class="section-lead-text">
-          <h2>Skills &amp; <span class="highlight-text">Engineering Stack</span></h2>
-          <p>Technologies, frameworks, and data pipelines mastered across production software.</p>
-        </div>
-
-        <div class="skills-quad-grid">
-          <!-- Languages -->
-          <div class="studio-card skill-box reveal-item">
-            <h3 class="skill-cat-title">Core Languages</h3>
-            <div class="skill-items-list">
-              <div class="skill-line"><span>Python</span><span class="s-level">Advanced</span></div>
-              <div class="skill-line"><span>Java</span><span class="s-level">Advanced</span></div>
-              <div class="skill-line"><span>SQL (MySQL / Postgres)</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>JavaScript (ES6+)</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>TypeScript</span><span class="s-level">Working</span></div>
-              <div class="skill-line"><span>HTML5 / CSS3</span><span class="s-level">Proficient</span></div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div class="studio-card skill-box reveal-item">
-            <h3 class="skill-cat-title">Backend &amp; Frameworks</h3>
-            <div class="skill-items-list">
-              <div class="skill-line"><span>Spring Boot</span><span class="s-level">Advanced</span></div>
-              <div class="skill-line"><span>FastAPI</span><span class="s-level">Advanced</span></div>
-              <div class="skill-line"><span>Hibernate / JPA</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>Flask</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>RESTful Architecture</span><span class="s-level">Expert</span></div>
-              <div class="skill-line"><span>Microservices Mesh</span><span class="s-level">Proficient</span></div>
-            </div>
-          </div>
-
-          <!-- AI & ML -->
-          <div class="studio-card skill-box reveal-item">
-            <h3 class="skill-cat-title">AI, LLMs &amp; Data</h3>
-            <div class="skill-items-list">
-              <div class="skill-line"><span>RAG Architectures</span><span class="s-level">Advanced</span></div>
-              <div class="skill-line"><span>Google Gemini API</span><span class="s-level">Advanced</span></div>
-              <div class="skill-line"><span>PyTorch / Scikit</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>Pandas &amp; NumPy</span><span class="s-level">Expert</span></div>
-              <div class="skill-line"><span>LangChain &amp; Vector DBs</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>Tableau Analytics</span><span class="s-level">Proficient</span></div>
-            </div>
-          </div>
-
-          <!-- Frontend & Tools -->
-          <div class="studio-card skill-box reveal-item">
-            <h3 class="skill-cat-title">Frontend, Cloud &amp; Tools</h3>
-            <div class="skill-items-list">
-              <div class="skill-line"><span>React.js / TanStack</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>Vite &amp; Modern Tooling</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>Git &amp; GitHub</span><span class="s-level">Expert</span></div>
-              <div class="skill-line"><span>Firebase Auth &amp; Cloud</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>Twilio &amp; Sarvam AI</span><span class="s-level">Proficient</span></div>
-              <div class="skill-line"><span>Docker Basics</span><span class="s-level">Working</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 8: CONTACT & DIRECT CONNECT -->
-    <section class="studio-section" id="contact">
-      <div class="container">
-        <div class="contact-studio-box reveal-item">
-          <div class="contact-left">
-            <span class="pill-badge pill-green">Direct Inquiry</span>
-            <h2 class="contact-heading">Let’s Build Something <span class="highlight-text">Exceptional</span>.</h2>
-            <p class="contact-sub">
-              Whether you have an ambitious AI project, a high-growth engineering role, or a technical inquiry — my inbox is always open.
+            <h3 class="c-title">Let’s Build Frontier Systems Together.</h3>
+            <p class="c-desc">
+              Looking for a high-velocity engineer who bridges deep-tech AI reasoning with pristine frontend polish? Reach out directly via encrypted channels below.
             </p>
 
-            <div class="contact-details-list">
-              <div class="c-detail-item">
-                <span class="c-lbl">Email:</span>
-                <a href="mailto:jshoundik06@gmail.com" class="c-link">jshoundik06@gmail.com</a>
-                <button class="copy-pill-btn" id="copy-email-btn" title="Copy email">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
+            <div class="comm-vector-list">
+              <div class="comm-item">
+                <span class="comm-lbl">EMAIL:</span>
+                <a href="mailto:shoundikjayant@gmail.com" class="comm-val">shoundikjayant@gmail.com</a>
+                <button class="btn-copy-chip" id="copy-email-btn" title="Copy email address">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>COPY</span>
                 </button>
               </div>
-              <div class="c-detail-item">
-                <span class="c-lbl">Phone:</span>
-                <a href="tel:+917070203434" class="c-link">+91 7070203434</a>
+              <div class="comm-item">
+                <span class="comm-lbl">PHONE:</span>
+                <a href="tel:+917070203434" class="comm-val">+91 7070203434</a>
               </div>
-              <div class="c-detail-item">
-                <span class="c-lbl">Location:</span>
-                <span class="c-val">Bhubaneswar / Ranchi, India (Open to Relocation &amp; Remote)</span>
+              <div class="comm-item">
+                <span class="comm-lbl">LINKEDIN:</span>
+                <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="comm-val">linkedin.com/in/jayant-shoundik</a>
               </div>
-              <div class="c-detail-item">
-                <span class="c-lbl">LinkedIn:</span>
-                <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="c-link">linkedin.com/in/jayant-shoundik</a>
-              </div>
-              <div class="c-detail-item">
-                <span class="c-lbl">GitHub:</span>
-                <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="c-link">github.com/JayantShoundik</a>
+              <div class="comm-item">
+                <span class="comm-lbl">GITHUB:</span>
+                <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="comm-val">github.com/JayantShoundik</a>
               </div>
             </div>
           </div>
 
-          <div class="contact-right">
-            <div class="terminal-quick-connect">
-              <div class="t-top-bar">
-                <span class="t-green-dot"></span>
-                <span class="t-title">Quick Action Hub</span>
-              </div>
-              <p class="t-body-desc">Send an instant email or connect directly through developer networks.</p>
-              <div class="t-action-buttons">
-                <a href="mailto:jshoundik06@gmail.com?subject=Opportunity%20Inquiry%20-%20Jayant%20Shoundik" class="btn-studio btn-studio-dark btn-block">
+          <div class="contact-quick-launch">
+            <div class="quick-launch-box">
+              <span class="ql-heading">EXPEDITE CONTACT</span>
+              <p class="ql-text">Instant one-click communication triggers:</p>
+              <div class="ql-buttons">
+                <a href="mailto:shoundikjayant@gmail.com?subject=Opportunity%20Inquiry%20-%20Jayant%20Shoundik" class="btn-stark btn-stark-primary btn-block">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  <span>Launch Direct Email</span>
+                  <span>TRANSMIT VIA EMAIL</span>
                 </a>
-                <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outline btn-block">
+                <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-outline btn-block">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
-                  <span>Connect on LinkedIn</span>
+                  <span>CONNECT ON LINKEDIN</span>
                 </a>
-                <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-ghost btn-block">
+                <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer" class="btn-stark btn-stark-ghost btn-block">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  <span>Inspect Repositories</span>
+                  <span>INSPECT SOURCE CODE</span>
                 </a>
               </div>
             </div>
@@ -718,37 +586,40 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="studio-footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <span class="f-monogram">JS</span>
-        <span>© 2026 Jayant Shoundik. Engineered with dual-identity studio architecture.</span>
+  <!-- STARK HUD FOOTER -->
+  <footer class="stark-footer">
+    <div class="container footer-grid">
+      <div class="f-left">
+        <div class="f-logo-row">
+          <span class="f-badge">SYS_ID: JS-2026</span>
+          <span class="f-tagline">JAYANT SHOUNDIK // FRONTEND &amp; AI ARCHITECT</span>
+        </div>
+        <p class="f-copy">Built with Stark-Tech Obsidian UI, Arc-Reactor Visual Engine, and 60FPS Ambient Particles.</p>
       </div>
-      <div class="footer-right">
-        <a href="#hero">Back to Top ↑</a>
-        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="f-right">
+        <a href="#hero">RETURN TO TOP [↑]</a>
+        <a href="https://github.com/JayantShoundik" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="https://linkedin.com/in/jayant-shoundik" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
       </div>
     </div>
   </footer>
 
-  <!-- INTERACTIVE SYSTEM DEEP-DIVE MODAL -->
+  <!-- INTERACTIVE HUD PROJECT MODAL -->
   <div class="modal-backdrop" id="project-modal" aria-hidden="true">
     <div class="modal-dialog">
       <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
       <div class="modal-content" id="modal-content">
-        <!-- Injected via JavaScript dynamically -->
+        <!-- Injected dynamically via JS -->
       </div>
     </div>
   </div>
 
-  <!-- Animated Notification Toast -->
-  <div class="toast-notification" id="toast">
-    <span class="toast-icon">✓</span>
-    <span class="toast-message" id="toast-msg">Copied to clipboard</span>
+  <!-- Animated HUD Toast -->
+  <div class="hud-toast" id="toast">
+    <span class="toast-dot"></span>
+    <span class="toast-msg" id="toast-msg">COPIED TO CLIPBOARD</span>
   </div>
 
   <script src="app.js"></script>
